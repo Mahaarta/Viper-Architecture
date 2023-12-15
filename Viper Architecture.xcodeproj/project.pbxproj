@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08E9578B2B2C02AD006C31AF /* Viper_ArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9578A2B2C02AD006C31AF /* Viper_ArchitectureApp.swift */; };
-		08E9578D2B2C02AD006C31AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9578C2B2C02AD006C31AF /* ContentView.swift */; };
 		08E9578F2B2C02AE006C31AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E9578E2B2C02AE006C31AF /* Assets.xcassets */; };
 		08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E957912B2C02AE006C31AF /* Preview Assets.xcassets */; };
 		08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9579B2B2C02AE006C31AF /* Viper_ArchitectureTests.swift */; };
 		08E957A62B2C02AE006C31AF /* Viper_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957A52B2C02AE006C31AF /* Viper_ArchitectureUITests.swift */; };
 		08E957A82B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957A72B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift */; };
+		08E957B52B2C035E006C31AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957B42B2C035E006C31AF /* AppDelegate.swift */; };
+		08E957C72B2C0A2A006C31AF /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957C52B2C0A2A006C31AF /* NewsListViewController.swift */; };
+		08E957C82B2C0A2A006C31AF /* NewsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E957C62B2C0A2A006C31AF /* NewsListViewController.xib */; };
+		08E957CA2B2C3973006C31AF /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957C92B2C3973006C31AF /* NewsListPresenter.swift */; };
+		08E957D32B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957D22B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift */; };
+		08E957D52B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957D42B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift */; };
+		08E957D72B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957D62B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift */; };
+		08E957D92B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957D82B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift */; };
+		08E957DB2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957DA2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift */; };
+		08E957DD2B2C4A57006C31AF /* NewsListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957DC2B2C4A57006C31AF /* NewsListEntity.swift */; };
+		08E957E02B2C513C006C31AF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 08E957DF2B2C513C006C31AF /* Alamofire */; };
+		08E957E22B2C5195006C31AF /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E12B2C5195006C31AF /* NewsListInteractor.swift */; };
+		08E957E42B2C5484006C31AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E32B2C5484006C31AF /* Constants.swift */; };
+		08E957E62B2C54D6006C31AF /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E52B2C54D6006C31AF /* NewsResponse.swift */; };
+		08E957E82B2C55D7006C31AF /* NewsListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E72B2C55D7006C31AF /* NewsListRoute.swift */; };
+		08E957F02B2C635E006C31AF /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957EE2B2C635E006C31AF /* NewsListTableViewCell.swift */; };
+		08E957F12B2C635E006C31AF /* NewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E957EF2B2C635E006C31AF /* NewsListTableViewCell.xib */; };
+		08E957F32B2C6620006C31AF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E957F22B2C6620006C31AF /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +51,6 @@
 
 /* Begin PBXFileReference section */
 		08E957872B2C02AD006C31AF /* Viper Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viper Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		08E9578A2B2C02AD006C31AF /* Viper_ArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_ArchitectureApp.swift; sourceTree = "<group>"; };
-		08E9578C2B2C02AD006C31AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08E9578E2B2C02AE006C31AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08E957912B2C02AE006C31AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08E957972B2C02AE006C31AF /* Viper ArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Viper ArchitectureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +58,23 @@
 		08E957A12B2C02AE006C31AF /* Viper ArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Viper ArchitectureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E957A52B2C02AE006C31AF /* Viper_ArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_ArchitectureUITests.swift; sourceTree = "<group>"; };
 		08E957A72B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_ArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08E957B42B2C035E006C31AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		08E957C52B2C0A2A006C31AF /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		08E957C62B2C0A2A006C31AF /* NewsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListViewController.xib; sourceTree = "<group>"; };
+		08E957C92B2C3973006C31AF /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
+		08E957D22B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewToPresenterProtocol.swift; sourceTree = "<group>"; };
+		08E957D42B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterToInteractorProtocol.swift; sourceTree = "<group>"; };
+		08E957D62B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
+		08E957D82B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterToViewProtocol.swift; sourceTree = "<group>"; };
+		08E957DA2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterToRouterProtocol.swift; sourceTree = "<group>"; };
+		08E957DC2B2C4A57006C31AF /* NewsListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListEntity.swift; sourceTree = "<group>"; };
+		08E957E12B2C5195006C31AF /* NewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
+		08E957E32B2C5484006C31AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		08E957E52B2C54D6006C31AF /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		08E957E72B2C55D7006C31AF /* NewsListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRoute.swift; sourceTree = "<group>"; };
+		08E957EE2B2C635E006C31AF /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		08E957EF2B2C635E006C31AF /* NewsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListTableViewCell.xib; sourceTree = "<group>"; };
+		08E957F22B2C6620006C31AF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E957E02B2C513C006C31AF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +126,9 @@
 		08E957892B2C02AD006C31AF /* Viper Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				08E9578A2B2C02AD006C31AF /* Viper_ArchitectureApp.swift */,
-				08E9578C2B2C02AD006C31AF /* ContentView.swift */,
-				08E9578E2B2C02AE006C31AF /* Assets.xcassets */,
+				08E957B92B2C043F006C31AF /* Module */,
 				08E957902B2C02AE006C31AF /* Preview Content */,
+				08E957B62B2C03FB006C31AF /* Supporting Files */,
 			);
 			path = "Viper Architecture";
 			sourceTree = "<group>";
@@ -127,6 +158,166 @@
 			path = "Viper ArchitectureUITests";
 			sourceTree = "<group>";
 		};
+		08E957B62B2C03FB006C31AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08E957B82B2C0425006C31AF /* Assets */,
+				08E957B72B2C041A006C31AF /* Application */,
+				08E957F22B2C6620006C31AF /* Launch Screen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08E957B72B2C041A006C31AF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				08E957B42B2C035E006C31AF /* AppDelegate.swift */,
+				08E957E32B2C5484006C31AF /* Constants.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		08E957B82B2C0425006C31AF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				08E9578E2B2C02AE006C31AF /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		08E957B92B2C043F006C31AF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				08E957BA2B2C044F006C31AF /* News List */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		08E957BA2B2C044F006C31AF /* News List */ = {
+			isa = PBXGroup;
+			children = (
+				08E957BB2B2C0595006C31AF /* View */,
+				08E957BD2B2C05A7006C31AF /* Interactor */,
+				08E957BC2B2C059B006C31AF /* Presenter */,
+				08E957BE2B2C05AC006C31AF /* Entity */,
+				08E957BF2B2C05B2006C31AF /* Route */,
+				08E957C02B2C05C0006C31AF /* Protocols */,
+			);
+			path = "News List";
+			sourceTree = "<group>";
+		};
+		08E957BB2B2C0595006C31AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08E957ED2B2C6349006C31AF /* Cell */,
+				08E957EC2B2C633B006C31AF /* View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08E957BC2B2C059B006C31AF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				08E957C92B2C3973006C31AF /* NewsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		08E957BD2B2C05A7006C31AF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				08E957E12B2C5195006C31AF /* NewsListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		08E957BE2B2C05AC006C31AF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				08E957DC2B2C4A57006C31AF /* NewsListEntity.swift */,
+				08E957E52B2C54D6006C31AF /* NewsResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		08E957BF2B2C05B2006C31AF /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				08E957E72B2C55D7006C31AF /* NewsListRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		08E957C02B2C05C0006C31AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08E957CD2B2C3C33006C31AF /* View to Presenter */,
+				08E957CE2B2C3C3E006C31AF /* Presenter to Interactor */,
+				08E957CF2B2C3C53006C31AF /* Interactor to Presenter */,
+				08E957D02B2C3C5F006C31AF /* Presenter to View */,
+				08E957D12B2C3C6D006C31AF /* Presenter to Router */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08E957CD2B2C3C33006C31AF /* View to Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				08E957D22B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift */,
+			);
+			path = "View to Presenter";
+			sourceTree = "<group>";
+		};
+		08E957CE2B2C3C3E006C31AF /* Presenter to Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				08E957D42B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift */,
+			);
+			path = "Presenter to Interactor";
+			sourceTree = "<group>";
+		};
+		08E957CF2B2C3C53006C31AF /* Interactor to Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				08E957D62B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift */,
+			);
+			path = "Interactor to Presenter";
+			sourceTree = "<group>";
+		};
+		08E957D02B2C3C5F006C31AF /* Presenter to View */ = {
+			isa = PBXGroup;
+			children = (
+				08E957D82B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift */,
+			);
+			path = "Presenter to View";
+			sourceTree = "<group>";
+		};
+		08E957D12B2C3C6D006C31AF /* Presenter to Router */ = {
+			isa = PBXGroup;
+			children = (
+				08E957DA2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift */,
+			);
+			path = "Presenter to Router";
+			sourceTree = "<group>";
+		};
+		08E957EC2B2C633B006C31AF /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08E957C52B2C0A2A006C31AF /* NewsListViewController.swift */,
+				08E957C62B2C0A2A006C31AF /* NewsListViewController.xib */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		08E957ED2B2C6349006C31AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				08E957EE2B2C635E006C31AF /* NewsListTableViewCell.swift */,
+				08E957EF2B2C635E006C31AF /* NewsListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +334,9 @@
 			dependencies = (
 			);
 			name = "Viper Architecture";
+			packageProductDependencies = (
+				08E957DF2B2C513C006C31AF /* Alamofire */,
+			);
 			productName = "Viper Architecture";
 			productReference = 08E957872B2C02AD006C31AF /* Viper Architecture.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +409,9 @@
 				Base,
 			);
 			mainGroup = 08E9577E2B2C02AD006C31AF;
+			packageReferences = (
+				08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 08E957882B2C02AD006C31AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */,
+				08E957C82B2C0A2A006C31AF /* NewsListViewController.xib in Resources */,
+				08E957F12B2C635E006C31AF /* NewsListTableViewCell.xib in Resources */,
+				08E957F32B2C6620006C31AF /* Launch Screen.storyboard in Resources */,
 				08E9578F2B2C02AE006C31AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +457,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E9578D2B2C02AD006C31AF /* ContentView.swift in Sources */,
-				08E9578B2B2C02AD006C31AF /* Viper_ArchitectureApp.swift in Sources */,
+				08E957B52B2C035E006C31AF /* AppDelegate.swift in Sources */,
+				08E957E82B2C55D7006C31AF /* NewsListRoute.swift in Sources */,
+				08E957E42B2C5484006C31AF /* Constants.swift in Sources */,
+				08E957DB2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift in Sources */,
+				08E957D32B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift in Sources */,
+				08E957C72B2C0A2A006C31AF /* NewsListViewController.swift in Sources */,
+				08E957E62B2C54D6006C31AF /* NewsResponse.swift in Sources */,
+				08E957D72B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift in Sources */,
+				08E957E22B2C5195006C31AF /* NewsListInteractor.swift in Sources */,
+				08E957D92B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift in Sources */,
+				08E957CA2B2C3973006C31AF /* NewsListPresenter.swift in Sources */,
+				08E957DD2B2C4A57006C31AF /* NewsListEntity.swift in Sources */,
+				08E957F02B2C635E006C31AF /* NewsListTableViewCell.swift in Sources */,
+				08E957D52B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +637,10 @@
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,9 +667,10 @@
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -588,6 +802,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08E957DF2B2C513C006C31AF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08E9577F2B2C02AD006C31AF /* Project object */;
 }
