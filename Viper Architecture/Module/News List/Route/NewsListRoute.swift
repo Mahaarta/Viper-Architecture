@@ -16,7 +16,7 @@ class NewsListRoute: NewsListPresenterToRouterProtocol {
         let router: NewsListPresenterToRouterProtocol = NewsListRoute()
         
         view.presenter = presenter
-        presenter.view = view as? any NewsListPresenterToViewProtocol
+        presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
