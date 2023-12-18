@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
 		08E9578F2B2C02AE006C31AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E9578E2B2C02AE006C31AF /* Assets.xcassets */; };
 		08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E957912B2C02AE006C31AF /* Preview Assets.xcassets */; };
 		08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9579B2B2C02AE006C31AF /* Viper_ArchitectureTests.swift */; };
@@ -30,6 +31,12 @@
 		08E957F02B2C635E006C31AF /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957EE2B2C635E006C31AF /* NewsListTableViewCell.swift */; };
 		08E957F12B2C635E006C31AF /* NewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E957EF2B2C635E006C31AF /* NewsListTableViewCell.xib */; };
 		08E957F32B2C6620006C31AF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E957F22B2C6620006C31AF /* Launch Screen.storyboard */; };
+		08F478CE2B30495700362475 /* Product Sans Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478C82B30495700362475 /* Product Sans Bold Italic.ttf */; };
+		08F478CF2B30495700362475 /* Product Sans Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478C92B30495700362475 /* Product Sans Light.ttf */; };
+		08F478D02B30495700362475 /* Product Sans Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CA2B30495700362475 /* Product Sans Medium.ttf */; };
+		08F478D12B30495700362475 /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CB2B30495700362475 /* Product Sans Bold.ttf */; };
+		08F478D22B30495700362475 /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CC2B30495700362475 /* Product Sans Regular.ttf */; };
+		08F478D32B30495700362475 /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CD2B30495700362475 /* Product Sans Italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		08E957872B2C02AD006C31AF /* Viper Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viper Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E9578E2B2C02AE006C31AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08E957912B2C02AE006C31AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -75,6 +83,13 @@
 		08E957EE2B2C635E006C31AF /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		08E957EF2B2C635E006C31AF /* NewsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListTableViewCell.xib; sourceTree = "<group>"; };
 		08E957F22B2C6620006C31AF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		08F478C82B30495700362475 /* Product Sans Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold Italic.ttf"; sourceTree = "<group>"; };
+		08F478C92B30495700362475 /* Product Sans Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Light.ttf"; sourceTree = "<group>"; };
+		08F478CA2B30495700362475 /* Product Sans Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Medium.ttf"; sourceTree = "<group>"; };
+		08F478CB2B30495700362475 /* Product Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold.ttf"; sourceTree = "<group>"; };
+		08F478CC2B30495700362475 /* Product Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Regular.ttf"; sourceTree = "<group>"; };
+		08F478CD2B30495700362475 /* Product Sans Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Italic.ttf"; sourceTree = "<group>"; };
+		08F478D42B3049A200362475 /* Viper-Architecture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Viper-Architecture-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +141,7 @@
 		08E957892B2C02AD006C31AF /* Viper Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				08F478D42B3049A200362475 /* Viper-Architecture-Info.plist */,
 				08E957B92B2C043F006C31AF /* Module */,
 				08E957902B2C02AE006C31AF /* Preview Content */,
 				08E957B62B2C03FB006C31AF /* Supporting Files */,
@@ -161,6 +177,7 @@
 		08E957B62B2C03FB006C31AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08F478C62B30492000362475 /* Custom Fonts */,
 				08E957B82B2C0425006C31AF /* Assets */,
 				08E957B72B2C041A006C31AF /* Application */,
 				08E957F22B2C6620006C31AF /* Launch Screen.storyboard */,
@@ -318,6 +335,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		08F478C62B30492000362475 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				08F478C72B30494800362475 /* Font Sans */,
+				0865F5D32B304A3D00FB1C50 /* UIFont.swift */,
+			);
+			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		08F478C72B30494800362475 /* Font Sans */ = {
+			isa = PBXGroup;
+			children = (
+				08F478C82B30495700362475 /* Product Sans Bold Italic.ttf */,
+				08F478CB2B30495700362475 /* Product Sans Bold.ttf */,
+				08F478CD2B30495700362475 /* Product Sans Italic.ttf */,
+				08F478C92B30495700362475 /* Product Sans Light.ttf */,
+				08F478CA2B30495700362475 /* Product Sans Medium.ttf */,
+				08F478CC2B30495700362475 /* Product Sans Regular.ttf */,
+			);
+			path = "Font Sans";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,11 +467,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F478CF2B30495700362475 /* Product Sans Light.ttf in Resources */,
 				08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */,
+				08F478D02B30495700362475 /* Product Sans Medium.ttf in Resources */,
+				08F478CE2B30495700362475 /* Product Sans Bold Italic.ttf in Resources */,
+				08F478D32B30495700362475 /* Product Sans Italic.ttf in Resources */,
 				08E957C82B2C0A2A006C31AF /* NewsListViewController.xib in Resources */,
 				08E957F12B2C635E006C31AF /* NewsListTableViewCell.xib in Resources */,
+				08F478D22B30495700362475 /* Product Sans Regular.ttf in Resources */,
 				08E957F32B2C6620006C31AF /* Launch Screen.storyboard in Resources */,
 				08E9578F2B2C02AE006C31AF /* Assets.xcassets in Resources */,
+				08F478D12B30495700362475 /* Product Sans Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +510,7 @@
 				08E957C72B2C0A2A006C31AF /* NewsListViewController.swift in Sources */,
 				08E957E62B2C54D6006C31AF /* NewsResponse.swift in Sources */,
 				08E957D72B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift in Sources */,
+				0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */,
 				08E957E22B2C5195006C31AF /* NewsListInteractor.swift in Sources */,
 				08E957D92B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift in Sources */,
 				08E957CA2B2C3973006C31AF /* NewsListPresenter.swift in Sources */,
@@ -637,6 +683,7 @@
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Viper-Architecture-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -667,6 +714,7 @@
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Viper-Architecture-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
