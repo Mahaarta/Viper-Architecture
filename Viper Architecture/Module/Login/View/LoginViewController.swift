@@ -110,8 +110,11 @@ class LoginViewController: UIViewController {
         return nil
     }
     
-    // MARK: Action
+// MARK: Action
     @objc func loginButtonTapped() {
+        usernameTextView.text = "mor_2314"
+        passwordTextView.text = "83r5^_"
+        
         presenter?.loginProcess(username: "mor_2314", password: "83r5^_")
     }
     
