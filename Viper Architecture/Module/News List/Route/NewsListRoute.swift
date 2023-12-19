@@ -25,3 +25,4 @@ class NewsListRoute: NewsListPresenterToRouterProtocol {
     }
     
 }
+
