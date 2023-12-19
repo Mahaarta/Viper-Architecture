@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Viper_Architecture" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="JmR-Oy-aip" id="qH5-4k-MOi"/>
+                <outlet property="dontHaveAccountTextView" destination="tHE-hB-2yM" id="viJ-S7-vHN"/>
                 <outlet property="loginButton" destination="JtR-Ix-19c" id="aWH-Gd-JMJ"/>
                 <outlet property="loginDescLabel" destination="0MM-0h-GeA" id="mbI-M8-FKI"/>
                 <outlet property="loginTitleLabel" destination="ZYh-qh-Ott" id="xc4-o1-oBp"/>
@@ -133,7 +134,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtR-Ix-19c">
-                                    <rect key="frame" x="32" y="679" width="329" height="50"/>
+                                    <rect key="frame" x="32" y="350.66666666666669" width="329" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="9ug-7X-RZH"/>
                                     </constraints>
@@ -146,6 +147,16 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="register" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHE-hB-2yM">
+                                    <rect key="frame" x="32" y="480.66666666666663" width="329" height="44"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Gii-UF-myb"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -155,15 +166,18 @@
                                 <constraint firstItem="4G4-Lv-hLT" firstAttribute="leading" secondItem="JmR-Oy-aip" secondAttribute="leading" constant="32" id="BEV-pr-6IW"/>
                                 <constraint firstAttribute="trailing" secondItem="4G4-Lv-hLT" secondAttribute="trailing" constant="32" id="D0U-Lf-8Zp"/>
                                 <constraint firstAttribute="trailing" secondItem="JtR-Ix-19c" secondAttribute="trailing" constant="32" id="J4s-f0-79z"/>
-                                <constraint firstAttribute="bottom" secondItem="JtR-Ix-19c" secondAttribute="bottom" constant="30" id="Smy-Il-o0i"/>
+                                <constraint firstItem="tHE-hB-2yM" firstAttribute="leading" secondItem="JmR-Oy-aip" secondAttribute="leading" constant="32" id="Lqs-l9-TBn"/>
                                 <constraint firstAttribute="trailing" secondItem="ZYh-qh-Ott" secondAttribute="trailing" constant="23" id="VHf-1p-dnw"/>
                                 <constraint firstAttribute="trailing" secondItem="bcl-1R-aCi" secondAttribute="trailing" constant="32" id="VzH-sg-BBV"/>
+                                <constraint firstItem="tHE-hB-2yM" firstAttribute="top" secondItem="JtR-Ix-19c" secondAttribute="bottom" constant="80" id="WWC-zY-h6g"/>
                                 <constraint firstItem="bcl-1R-aCi" firstAttribute="leading" secondItem="JmR-Oy-aip" secondAttribute="leading" constant="32" id="XQg-Pu-Zvc"/>
                                 <constraint firstItem="4G4-Lv-hLT" firstAttribute="top" secondItem="bcl-1R-aCi" secondAttribute="bottom" constant="50" id="Yi7-vE-pcS"/>
                                 <constraint firstItem="ZYh-qh-Ott" firstAttribute="top" secondItem="JmR-Oy-aip" secondAttribute="top" constant="32" id="aSB-KF-lpA"/>
+                                <constraint firstItem="JtR-Ix-19c" firstAttribute="top" secondItem="4G4-Lv-hLT" secondAttribute="bottom" constant="40" id="bUB-mD-qqP"/>
                                 <constraint firstAttribute="trailing" secondItem="0MM-0h-GeA" secondAttribute="trailing" constant="32" id="gUN-XZ-sJ1"/>
                                 <constraint firstItem="ZYh-qh-Ott" firstAttribute="leading" secondItem="JmR-Oy-aip" secondAttribute="leading" constant="32" id="p1E-YN-hwz"/>
                                 <constraint firstItem="bcl-1R-aCi" firstAttribute="top" secondItem="0MM-0h-GeA" secondAttribute="bottom" constant="60" id="uPX-Ab-Yj8"/>
+                                <constraint firstAttribute="trailing" secondItem="tHE-hB-2yM" secondAttribute="trailing" constant="32" id="wk1-WS-4V5"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -191,6 +205,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

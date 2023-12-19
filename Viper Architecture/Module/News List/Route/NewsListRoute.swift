@@ -9,7 +9,7 @@ import UIKit
 
 class NewsListRoute: NewsListPresenterToRouterProtocol {
     
-    class func createModule() -> UIViewController {
+    static func createModule() -> UIViewController {
         let view = NewsListViewController()
         var presenter: NewsListViewToPresenterProtocol & NewsListInteractorToPresenterProtocol = NewsListPresenter()
         var interactor: NewsListPresenterToInteractorProtocol = NewsListInteractor()

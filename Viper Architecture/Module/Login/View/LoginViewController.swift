@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextView: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var dontHaveAccountTextView: UITextView!
     
     var presenter: LoginViewToPresenterProtocol?
     
@@ -32,6 +33,7 @@ class LoginViewController: UIViewController {
         configurePasswordLabel()
         configurePasswordTextView()
         configureLoginButton()
+        configureAlreadHasAccountLabel()
     }
     
     /// Configure `Keyboard`
@@ -96,6 +98,62 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
+    /// Configure `Register Label`
+    private func configureAlreadHasAccountLabel() {
+        let text = NSMutableAttributedString(string: "Don’t have an account? ")
+        text.addAttribute(
+            NSAttributedString.Key.font,
+            value: FontSans(fontSansType: .medium, fontSize: 14).set(),
+            range: NSMakeRange(0, text.length)
+        )
+        
+        let selectablePart = NSMutableAttributedString(string: "Sign Up")
+        selectablePart.addAttribute(
+            NSAttributedString.Key.font,
+            value: FontSans(fontSansType: .medium, fontSize: 14).set(),
+            range: NSMakeRange(0, selectablePart.length)
+        )
+        
+        /// Add an underline to indicate this portion of text is selectable (optional)
+        selectablePart.addAttribute(
+            NSAttributedString.Key.underlineStyle,
+            value: 1,
+            range: NSMakeRange(0,selectablePart.length)
+        )
+        
+        selectablePart.addAttribute(
+            NSAttributedString.Key.underlineColor,
+            value: UIColor.black,
+            range: NSMakeRange(0, selectablePart.length)
+        )
+        
+        /// Add an NSLinkAttributeName with a value of an url or anything else
+        selectablePart.addAttribute(
+            NSAttributedString.Key.link,
+            value: "signup", range: NSMakeRange(0,selectablePart.length)
+        )
+        
+        /// Combine the non-selectable string with the selectable string
+        text.append(selectablePart)
+        
+        /// Center the text (optional)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.center
+        text.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, text.length))
+        
+        /// To set the link text color (optional)
+        dontHaveAccountTextView.linkTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)
+        ]
+        
+        dontHaveAccountTextView.attributedText = text
+        dontHaveAccountTextView.isEditable = false
+        dontHaveAccountTextView.isSelectable = true
+        dontHaveAccountTextView.delegate = self
+    }
+    
+    /// Configure `Detect First Responder`
     private func findFirstResponder(view: UIView) -> UIView? {
         if view.isFirstResponder {
             return view
@@ -154,6 +212,15 @@ extension LoginViewController: LoginPresenterToViewProtocol {
         let alert = UIAlertController(title: "Whoops!", message: "Login Failed", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Back", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: Delegate - TextView
+extension LoginViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        let vc = RegisterViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        return false
     }
 }
 

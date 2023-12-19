@@ -14,6 +14,18 @@
 		0823B92F2B316EFF0076355E /* LoginInteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B92E2B316EFF0076355E /* LoginInteractorToPresenterProtocol.swift */; };
 		0823B9312B3182430076355E /* LoginBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9302B3182430076355E /* LoginBaseEndpoint.swift */; };
 		0823B9332B3186030076355E /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9322B3186030076355E /* LoginEntity.swift */; };
+		0823B93D2B319C600076355E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B93B2B319C600076355E /* RegisterViewController.swift */; };
+		0823B93E2B319C600076355E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0823B93C2B319C600076355E /* RegisterViewController.xib */; };
+		0823B9402B319C740076355E /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B93F2B319C740076355E /* RegisterInteractor.swift */; };
+		0823B9422B319C7E0076355E /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9412B319C7E0076355E /* RegisterPresenter.swift */; };
+		0823B9442B319C860076355E /* RegisterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9432B319C860076355E /* RegisterEntity.swift */; };
+		0823B9462B319C8C0076355E /* RegisterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9452B319C8C0076355E /* RegisterRoute.swift */; };
+		0823B94D2B319D470076355E /* RegisterViewToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B94C2B319D470076355E /* RegisterViewToPresenterProtocol.swift */; };
+		0823B94F2B319D530076355E /* RegisterPresenterToInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B94E2B319D530076355E /* RegisterPresenterToInteractorProtocol.swift */; };
+		0823B9512B319D620076355E /* RegisterInteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9502B319D620076355E /* RegisterInteractorToPresenterProtocol.swift */; };
+		0823B9532B319D6B0076355E /* RegisterPresenterToViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9522B319D6B0076355E /* RegisterPresenterToViewProtocol.swift */; };
+		0823B9552B319D780076355E /* RegisterPresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */; };
+		0823B9572B31A8750076355E /* RegisterBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
 		08A408BF2B303E110074BF3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408BD2B303E110074BF3C /* LoginViewController.swift */; };
 		08A408C02B303E110074BF3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A408BE2B303E110074BF3C /* LoginViewController.xib */; };
@@ -76,6 +88,18 @@
 		0823B92E2B316EFF0076355E /* LoginInteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
 		0823B9302B3182430076355E /* LoginBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBaseEndpoint.swift; sourceTree = "<group>"; };
 		0823B9322B3186030076355E /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		0823B93B2B319C600076355E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0823B93C2B319C600076355E /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		0823B93F2B319C740076355E /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		0823B9412B319C7E0076355E /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		0823B9432B319C860076355E /* RegisterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntity.swift; sourceTree = "<group>"; };
+		0823B9452B319C8C0076355E /* RegisterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRoute.swift; sourceTree = "<group>"; };
+		0823B94C2B319D470076355E /* RegisterViewToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewToPresenterProtocol.swift; sourceTree = "<group>"; };
+		0823B94E2B319D530076355E /* RegisterPresenterToInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterToInteractorProtocol.swift; sourceTree = "<group>"; };
+		0823B9502B319D620076355E /* RegisterInteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
+		0823B9522B319D6B0076355E /* RegisterPresenterToViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterToViewProtocol.swift; sourceTree = "<group>"; };
+		0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterToRouterProtocol.swift; sourceTree = "<group>"; };
+		0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBaseEndpoint.swift; sourceTree = "<group>"; };
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		08A408BD2B303E110074BF3C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A408BE2B303E110074BF3C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -142,6 +166,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0823B9342B319C0D0076355E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				0823B93A2B319C4B0076355E /* Protocols */,
+				0823B9392B319C440076355E /* Route */,
+				0823B9382B319C3D0076355E /* Entity */,
+				0823B9372B319C250076355E /* Presenter */,
+				0823B9362B319C1E0076355E /* Interactor */,
+				0823B9352B319C1A0076355E /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		0823B9352B319C1A0076355E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0823B93B2B319C600076355E /* RegisterViewController.swift */,
+				0823B93C2B319C600076355E /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0823B9362B319C1E0076355E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0823B93F2B319C740076355E /* RegisterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0823B9372B319C250076355E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9412B319C7E0076355E /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0823B9382B319C3D0076355E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9432B319C860076355E /* RegisterEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0823B9392B319C440076355E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9452B319C8C0076355E /* RegisterRoute.swift */,
+				0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		0823B93A2B319C4B0076355E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0823B94B2B319D050076355E /* Presenter to Router */,
+				0823B9492B319CE60076355E /* Interactor to Presenter */,
+				0823B9482B319CA20076355E /* Presenter To Interactor */,
+				0823B94A2B319CFA0076355E /* Presenter to View */,
+				0823B9472B319C910076355E /* View to Presenter */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0823B9472B319C910076355E /* View to Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0823B94C2B319D470076355E /* RegisterViewToPresenterProtocol.swift */,
+			);
+			path = "View to Presenter";
+			sourceTree = "<group>";
+		};
+		0823B9482B319CA20076355E /* Presenter To Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0823B94E2B319D530076355E /* RegisterPresenterToInteractorProtocol.swift */,
+			);
+			path = "Presenter To Interactor";
+			sourceTree = "<group>";
+		};
+		0823B9492B319CE60076355E /* Interactor to Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9502B319D620076355E /* RegisterInteractorToPresenterProtocol.swift */,
+			);
+			path = "Interactor to Presenter";
+			sourceTree = "<group>";
+		};
+		0823B94A2B319CFA0076355E /* Presenter to View */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9522B319D6B0076355E /* RegisterPresenterToViewProtocol.swift */,
+			);
+			path = "Presenter to View";
+			sourceTree = "<group>";
+		};
+		0823B94B2B319D050076355E /* Presenter to Router */ = {
+			isa = PBXGroup;
+			children = (
+				0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */,
+			);
+			path = "Presenter to Router";
+			sourceTree = "<group>";
+		};
 		0865F5D52B304BFE00FB1C50 /* Costum Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +476,7 @@
 		08E957B92B2C043F006C31AF /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				0823B9342B319C0D0076355E /* Register */,
 				08A408B52B3038C90074BF3C /* Login */,
 				08E957BA2B2C044F006C31AF /* News List */,
 			);
@@ -624,6 +756,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F478CF2B30495700362475 /* Product Sans Light.ttf in Resources */,
+				0823B93E2B319C600076355E /* RegisterViewController.xib in Resources */,
 				08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */,
 				08F478D02B30495700362475 /* Product Sans Medium.ttf in Resources */,
 				08F478CE2B30495700362475 /* Product Sans Bold Italic.ttf in Resources */,
@@ -659,30 +792,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0823B93D2B319C600076355E /* RegisterViewController.swift in Sources */,
 				08E957B52B2C035E006C31AF /* AppDelegate.swift in Sources */,
 				0823B92D2B316EF40076355E /* LoginPresenterToViewProtocol.swift in Sources */,
 				08E957E82B2C55D7006C31AF /* NewsListRoute.swift in Sources */,
 				08E957E42B2C5484006C31AF /* Constants.swift in Sources */,
 				0823B9312B3182430076355E /* LoginBaseEndpoint.swift in Sources */,
 				08A408BF2B303E110074BF3C /* LoginViewController.swift in Sources */,
+				0823B9442B319C860076355E /* RegisterEntity.swift in Sources */,
 				08A408C22B303E3D0074BF3C /* LoginInteractor.swift in Sources */,
 				08E957DB2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift in Sources */,
+				0823B9462B319C8C0076355E /* RegisterRoute.swift in Sources */,
 				0823B9272B316ED60076355E /* LoginViewToPresenterProtocol.swift in Sources */,
 				08E957D32B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift in Sources */,
+				0823B94D2B319D470076355E /* RegisterViewToPresenterProtocol.swift in Sources */,
 				08E957C72B2C0A2A006C31AF /* NewsListViewController.swift in Sources */,
 				08E957E62B2C54D6006C31AF /* NewsResponse.swift in Sources */,
+				0823B9572B31A8750076355E /* RegisterBaseEndpoint.swift in Sources */,
 				0823B92B2B316EEB0076355E /* LoginPresenterToRouterProtocol.swift in Sources */,
 				0823B92F2B316EFF0076355E /* LoginInteractorToPresenterProtocol.swift in Sources */,
+				0823B9402B319C740076355E /* RegisterInteractor.swift in Sources */,
 				08A408C42B303EB70074BF3C /* LoginPresenter.swift in Sources */,
 				08E957D72B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift in Sources */,
+				0823B9512B319D620076355E /* RegisterInteractorToPresenterProtocol.swift in Sources */,
 				0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */,
 				08A408C62B303EBF0074BF3C /* LoginRoute.swift in Sources */,
+				0823B94F2B319D530076355E /* RegisterPresenterToInteractorProtocol.swift in Sources */,
 				08E957E22B2C5195006C31AF /* NewsListInteractor.swift in Sources */,
 				08E957D92B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift in Sources */,
 				08E957CA2B2C3973006C31AF /* NewsListPresenter.swift in Sources */,
+				0823B9422B319C7E0076355E /* RegisterPresenter.swift in Sources */,
 				0823B9292B316EE10076355E /* LoginPresenterToInteractorProtocol.swift in Sources */,
 				08E957DD2B2C4A57006C31AF /* NewsListEntity.swift in Sources */,
 				08E957F02B2C635E006C31AF /* NewsListTableViewCell.swift in Sources */,
+				0823B9532B319D6B0076355E /* RegisterPresenterToViewProtocol.swift in Sources */,
+				0823B9552B319D780076355E /* RegisterPresenterToRouterProtocol.swift in Sources */,
 				0823B9332B3186030076355E /* LoginEntity.swift in Sources */,
 				08E957D52B2C3E78006C31AF /* NewsListPresenterToInteractorProtocol.swift in Sources */,
 			);
@@ -858,6 +1002,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -889,6 +1034,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

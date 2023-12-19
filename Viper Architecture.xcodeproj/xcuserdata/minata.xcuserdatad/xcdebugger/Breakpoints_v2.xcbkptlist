@@ -49,6 +49,21 @@
                   endingLineNumber = "29"
                   offsetFromSymbolStart = "116">
                </Location>
+               <Location
+                  uuid = "DF8795C1-B674-483F-9A77-AF3EDCC5FE4C - f98f1c36affd35d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Viper_Architecture.LoginInteractor.loginProcess(username: Swift.String, password: Swift.String) -&gt; ()"
+                  moduleName = "Viper Architecture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Login/Interactor/LoginInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "108">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
