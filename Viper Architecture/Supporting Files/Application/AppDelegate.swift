@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let liveNews = NewsListRoute.createModule()
+        let loginView = LoginRoute.createModule()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = liveNews
+        window?.rootViewController = loginView
         window?.makeKeyAndVisible()
         
         return true
