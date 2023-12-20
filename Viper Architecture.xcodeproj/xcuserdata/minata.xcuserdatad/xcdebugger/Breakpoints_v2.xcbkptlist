@@ -7,47 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DF8795C1-B674-483F-9A77-AF3EDCC5FE4C"
+            uuid = "8172BA3B-4D03-4B2C-B66E-5C91522AD7A0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Viper Architecture/Module/Login/Interactor/LoginInteractor.swift"
+            filePath = "Viper Architecture/Module/Register/Interactor/RegisterInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "loginProcess(username:password:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "registerProcess(name:email:password:avatar:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DF8795C1-B674-483F-9A77-AF3EDCC5FE4C - 53709d02ccecf5b4"
+                  uuid = "8172BA3B-4D03-4B2C-B66E-5C91522AD7A0 - 688b73ccdbb5bcdb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Viper_Architecture.LoginInteractor.loginProcess(username: Swift.String, password: Swift.String) -&gt; ()"
+                  symbolName = "Viper_Architecture.RegisterInteractor.registerProcess(name: Swift.String, email: Swift.String, password: Swift.String, avatar: Swift.String) -&gt; ()"
                   moduleName = "Viper Architecture"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Login/Interactor/LoginInteractor.swift"
+                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Register/Interactor/RegisterInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "784">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "996">
                </Location>
                <Location
-                  uuid = "DF8795C1-B674-483F-9A77-AF3EDCC5FE4C - f98f1c36affd35d3"
+                  uuid = "8172BA3B-4D03-4B2C-B66E-5C91522AD7A0 - bf0c483799795029"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Viper_Architecture.LoginInteractor.loginProcess(username: Swift.String, password: Swift.String) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Viper_Architecture.RegisterInteractor.registerProcess(name: Swift.String, email: Swift.String, password: Swift.String, avatar: Swift.String) -&gt; ()"
                   moduleName = "Viper Architecture"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Login/Interactor/LoginInteractor.swift"
+                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Register/Interactor/RegisterInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "116">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "8172BA3B-4D03-4B2C-B66E-5C91522AD7A0 - bf0c483799795029"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Viper_Architecture.RegisterInteractor.registerProcess(name: Swift.String, email: Swift.String, password: Swift.String, avatar: Swift.String) -&gt; ()"
+                  moduleName = "Viper Architecture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Register/Interactor/RegisterInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "144">
                </Location>
             </Locations>
          </BreakpointContent>

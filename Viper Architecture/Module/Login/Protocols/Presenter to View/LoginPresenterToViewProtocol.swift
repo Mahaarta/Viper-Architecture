@@ -9,5 +9,6 @@ protocol LoginPresenterToViewProtocol: Any {
     
     func loginSuccess()
     func showError()
+    func navigateToRegister()
     
 }

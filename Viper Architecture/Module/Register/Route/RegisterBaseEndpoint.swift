@@ -1,11 +1,11 @@
 //
-//  LoginBaseEndpoint.swift
+//  RegisterBaseEndpoint.swift
 //  Viper Architecture
 //
 //  Created by Minata on 19/12/2023.
 //
 
-enum LoginBaseEndpoint {
+enum RegisterBaseEndpoint {
      static func getBasePath() -> String {
         #if DEBUG
         return "https://api.escuelajs.co/api/"

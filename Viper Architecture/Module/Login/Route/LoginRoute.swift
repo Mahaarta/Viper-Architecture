@@ -24,4 +24,11 @@ class LoginRoute: LoginPresenterToRouterProtocol {
         return view
     }
     
+    func navigateToRegister(from view: LoginPresenterToViewProtocol?) {
+        let vc = RegisterRoute.createModule()
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
