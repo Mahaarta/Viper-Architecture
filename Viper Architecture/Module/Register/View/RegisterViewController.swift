@@ -211,10 +211,10 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController: RegisterPresenterToViewProtocol {
     func registerSuccess() {
         let alert = UIAlertController(title: "Nice!", message: "Register Success", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: {
+        alert.addAction(UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { _ in 
             self.navigationController?.popViewController(animated: true)
-        })
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func registerFailed() {
