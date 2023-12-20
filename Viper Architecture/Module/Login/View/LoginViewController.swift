@@ -213,13 +213,16 @@ extension LoginViewController: LoginPresenterToViewProtocol {
         alert.addAction(UIAlertAction(title: "Back", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func navigateToRegister() {
+        presenter?.navigateToRegister()
+    }
 }
 
 // MARK: Delegate - TextView
 extension LoginViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        let vc = RegisterViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigateToRegister()
         return false
     }
 }

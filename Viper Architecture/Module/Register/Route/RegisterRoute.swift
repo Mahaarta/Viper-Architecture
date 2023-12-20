@@ -16,7 +16,7 @@ class RegisterRoute: RegisterPresenterToRouterProtocol {
         let router: RegisterPresenterToRouterProtocol = RegisterRoute()
         
         view.presenter = presenter
-        presenter.view = view as? RegisterPresenterToViewProtocol
+        presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter

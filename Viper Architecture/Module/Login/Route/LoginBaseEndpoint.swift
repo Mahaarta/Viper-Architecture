@@ -8,9 +8,9 @@
 enum LoginBaseEndpoint {
      static func getBasePath() -> String {
         #if DEBUG
-        return "https://fakestoreapi.com/"
+        return "https://api.escuelajs.co/api/"
         #else
-        return "https://fakestoreapi.com/"
+        return "https://api.escuelajs.co/api/"
         #endif
     }
 }

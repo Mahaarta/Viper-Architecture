@@ -11,7 +11,7 @@ class RegisterPresenter: RegisterViewToPresenterProtocol {
     var router: RegisterPresenterToRouterProtocol?
     
     func registerProcess(name: String, email: String, password: String, avatar: String) {
-        interactor?.registerProcess(name: name, email: email, password: password, avatar: "https://picsum.photos/800")
+        interactor?.registerProcess(name: name, email: email, password: password, avatar: avatar)
     }
 }
 

@@ -17,7 +17,7 @@ class RegisterInteractor: RegisterPresenterToInteractorProtocol {
     }
     
     func registerProcess(name: String, email: String, password: String, avatar: String) {
-        let endpoint = getPath() + "/users"
+        let endpoint = getPath() + "users"
         let parameters: [String: Any] = ["name": name, "password": password, "email": email, "avatar": avatar]
         
         AF.request(
@@ -26,8 +26,8 @@ class RegisterInteractor: RegisterPresenterToInteractorProtocol {
             parameters: parameters,
             encoding: JSONEncoding.default
         ).response { response in
-            
-            if response.response?.statusCode == 200 {
+            let statusCode = response.response?.statusCode
+            if statusCode == 200 || statusCode == 201 {
                 guard let data = response.data else { return }
                 do {
                     let decoder = JSONDecoder()
