@@ -45,14 +45,14 @@ class LoginViewController: UIViewController {
     
     /// Configure `Login Title`
     private func configureLoginTitleLabel() {
-        loginTitleLabel.text = "Login"
+        loginTitleLabel.text = LoginString.loginTitle
         loginTitleLabel.font = FontSans(fontSansType: .medium, fontSize: 25).set()
         loginTitleLabel.textAlignment = .left
     }
     
     /// Configure `Login Title`
     private func configureLoginDescLabel() {
-        loginDescLabel.text = "Please enter your data to continue"
+        loginDescLabel.text = LoginString.loginDesc
         loginDescLabel.font = FontSans(fontSansType: .regular, fontSize: 14).set()
         loginDescLabel.textAlignment = .left
         loginDescLabel.textColor = .lightGray
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     
     /// Configure `Username textView`
     private func configureUsernameLabel() {
-        usernameLabel.text = "User Name"
+        usernameLabel.text = TextView.userName
         usernameLabel.font = FontSans(fontSansType: .regular, fontSize: 12).set()
         usernameLabel.textAlignment = .left
     }
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     
     /// Configure `Password textView`
     private func configurePasswordLabel() {
-        passwordLabel.text = "Password"
+        passwordLabel.text = TextView.password
         passwordLabel.font = FontSans(fontSansType: .regular, fontSize: 12).set()
         passwordLabel.textAlignment = .left
     }
@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
     /// Configure `Login Button`
     private func configureLoginButton() {
         let attr = [NSAttributedString.Key.font: FontSans(fontSansType: .medium, fontSize: 16).set()]
-        let attributes = NSAttributedString(string: "Login", attributes: attr)
+        let attributes = NSAttributedString(string: LoginString.loginTitle, attributes: attr)
         
         loginButton.tintColor = .white
         loginButton.layer.cornerRadius = 8
@@ -100,14 +100,14 @@ class LoginViewController: UIViewController {
     
     /// Configure `Register Label`
     private func configureAlreadHasAccountLabel() {
-        let text = NSMutableAttributedString(string: "Don’t have an account? ")
+        let text = NSMutableAttributedString(string: LoginString.dontHaveAccount)
         text.addAttribute(
             NSAttributedString.Key.font,
             value: FontSans(fontSansType: .medium, fontSize: 14).set(),
             range: NSMakeRange(0, text.length)
         )
         
-        let selectablePart = NSMutableAttributedString(string: "Sign Up")
+        let selectablePart = NSMutableAttributedString(string: Register.signup)
         selectablePart.addAttribute(
             NSAttributedString.Key.font,
             value: FontSans(fontSansType: .medium, fontSize: 14).set(),
@@ -203,14 +203,14 @@ class LoginViewController: UIViewController {
 // MARK: - LiveNewsListPresenterToViewProtocol
 extension LoginViewController: LoginPresenterToViewProtocol {
     func loginSuccess() {
-        let alert = UIAlertController(title: "Nice!", message: "Login Success", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Application.okay, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     func showError() {
-        let alert = UIAlertController(title: "Whoops!", message: "Login Failed", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Back", style: UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -227,6 +227,32 @@ extension LoginViewController: UITextViewDelegate {
     }
 }
 
+// MARK: Localize String
+extension LoginViewController {
+    struct Application {
+        static let nice = localizedString(StructLocalization.Application.nice)
+        static let back = localizedString(StructLocalization.Application.back)
+        static let okay = localizedString(StructLocalization.Application.back)
+        static let whoops = localizedString(StructLocalization.Application.back)
+    }
+    
+    struct LoginString {
+        static let loginTitle = localizedString(StructLocalization.Login.loginTitle)
+        static let loginDesc = localizedString(StructLocalization.Login.loginDesc)
+        static let loginSuccess = localizedString(StructLocalization.Login.loginSuccess)
+        static let loginFailed = localizedString(StructLocalization.Login.loginFailed)
+        static let dontHaveAccount = localizedString(StructLocalization.Login.dontHaveAccount)
+    }
+    
+    struct TextView {
+        static let userName = localizedString(StructLocalization.TextView.userName)
+        static let password = localizedString(StructLocalization.TextView.password)
+    }
+    
+    struct Register {
+        static let signup = localizedString(StructLocalization.Register.signUp)
+    }
+}
 
 @available(iOS 17.0, *)
 #Preview {

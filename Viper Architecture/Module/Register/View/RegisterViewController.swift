@@ -41,9 +41,9 @@ class RegisterViewController: UIViewController {
         configureRegisterTitleLabel()
         configureAlreadHasAccountLabel()
         
-        configureTitleLabelForTextField(for: nameTitleLabel, text: "Name")
-        configureTitleLabelForTextField(for: emailTitleLabel, text: "Email")
-        configureTitleLabelForTextField(for: passwordTitleLabel, text: "Password")
+        configureTitleLabelForTextField(for: nameTitleLabel, text: TextView.name)
+        configureTitleLabelForTextField(for: emailTitleLabel, text: TextView.email)
+        configureTitleLabelForTextField(for: passwordTitleLabel, text: TextView.password)
         
         configureTextField(for: nameTextField)
         configureTextField(for: emailTextField)
@@ -59,17 +59,18 @@ class RegisterViewController: UIViewController {
     
     /// Configure `Login Title`
     private func configureRegisterTitleLabel() {
-        registerTitleLabel.text = "Register"
-        registerTitleLabel.font = FontSans(fontSansType: .medium, fontSize: 25).set()
+        registerTitleLabel.numberOfLines = 2
         registerTitleLabel.textAlignment = .left
+        registerTitleLabel.text = Register.registerTitle
+        registerTitleLabel.font = FontSans(fontSansType: .medium, fontSize: 25).set()
     }
     
     /// Configure `Register Title`
     private func configureRegisterDescLabel() {
-        registerDescLabel.text = "Please enter your data to continue"
-        registerDescLabel.font = FontSans(fontSansType: .regular, fontSize: 14).set()
         registerDescLabel.textAlignment = .left
         registerDescLabel.textColor = .lightGray
+        registerDescLabel.text = Register.registerDesc
+        registerDescLabel.font = FontSans(fontSansType: .regular, fontSize: 14).set()
     }
     
     /// Configure `Title Label for Text Field`
@@ -90,7 +91,7 @@ class RegisterViewController: UIViewController {
     /// Configure `Register Button`
     private func configureRegisterButton() {
         let attr = [NSAttributedString.Key.font: FontSans(fontSansType: .medium, fontSize: 14).set()]
-        let attributes = NSAttributedString(string: "Register", attributes: attr)
+        let attributes = NSAttributedString(string: Register.signup, attributes: attr)
         
         registerButton.tintColor = .white
         registerButton.layer.cornerRadius = 8
@@ -102,14 +103,14 @@ class RegisterViewController: UIViewController {
     
     /// Configure Already have account label view
     private func configureAlreadHasAccountLabel() {
-        let text = NSMutableAttributedString(string: "Already have account? ")
+        let text = NSMutableAttributedString(string: Register.alreadyHaveAccount)
         text.addAttribute(
             NSAttributedString.Key.font,
             value: FontSans(fontSansType: .medium, fontSize: 14).set(),
             range: NSMakeRange(0, text.length)
         )
         
-        let selectablePart = NSMutableAttributedString(string: "Login")
+        let selectablePart = NSMutableAttributedString(string: LoginString.loginTitle)
         selectablePart.addAttribute(
             NSAttributedString.Key.font,
             value: FontSans(fontSansType: .medium, fontSize: 14).set(),
@@ -210,16 +211,16 @@ class RegisterViewController: UIViewController {
 // MARK: Presenter to View Protocol
 extension RegisterViewController: RegisterPresenterToViewProtocol {
     func registerSuccess() {
-        let alert = UIAlertController(title: "Nice!", message: "Register Success", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { _ in 
+        let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: LoginString.loginTitle, style: UIAlertAction.Style.default, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true, completion: nil)
     }
     
     func registerFailed() {
-        let alert = UIAlertController(title: "Whopps!", message: "Register Failed", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Back", style: UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -229,5 +230,35 @@ extension RegisterViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         self.navigationController?.popViewController(animated: true)
         return false
+    }
+}
+
+// MARK: Localize String
+extension RegisterViewController {
+    struct Application {
+        static let nice = localizedString(StructLocalization.Application.nice)
+        static let back = localizedString(StructLocalization.Application.back)
+        static let okay = localizedString(StructLocalization.Application.back)
+        static let whoops = localizedString(StructLocalization.Application.back)
+    }
+    
+    struct LoginString {
+        static let loginTitle = localizedString(StructLocalization.Login.loginTitle)
+        static let loginSuccess = localizedString(StructLocalization.Login.loginSuccess)
+        static let loginFailed = localizedString(StructLocalization.Login.loginFailed)
+    }
+    
+    struct TextView {
+        static let name = localizedString(StructLocalization.TextView.name)
+        static let email = localizedString(StructLocalization.TextView.email)
+        static let userName = localizedString(StructLocalization.TextView.userName)
+        static let password = localizedString(StructLocalization.TextView.password)
+    }
+    
+    struct Register {
+        static let signup = localizedString(StructLocalization.Register.signUp)
+        static let registerTitle = localizedString(StructLocalization.Register.registerTitle)
+        static let registerDesc = localizedString(StructLocalization.Register.registerDesc)
+        static let alreadyHaveAccount = localizedString(StructLocalization.Register.alreadyHaveAccount)
     }
 }
