@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
         
         let loginView = LoginRoute.createModule()
         let navigationController = UINavigationController(rootViewController: loginView)

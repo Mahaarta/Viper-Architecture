@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Viper Architecture
+
+  Created by Minata on 20/12/2023.
+  
+*/
+
+
+// MARK: Application
+"nice" = "Nice";
+"okay" = "Okay";
+"back" = "Back";
+"whoops" = "Whoops";
+"viper-architecture" = "Viper Architecture";
+
+// MARK: Login
+"login-title" = "Login";
+"login-desc" = "Please enter your data to continue";
+"dont-have-account" = "Don’t have an account? ";
+"login-success" = "Login Success";
+"login-failed" = "Login Failed";
+
+// MARK: Register
+"signup" = "Sign Up";
+"register" = "Register";
+"register-title" = "Create \nYour Account";
+"register-desc" = "Please enter your data to continue";
+"already-have-account" = "Already have account? ";
+
+// MARK: Text View
+"name" = "Name";
+"email" = "Email";
+"userName" = "User Name";
+"password" = "Password";
