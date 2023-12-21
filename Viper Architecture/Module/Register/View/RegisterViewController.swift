@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RegisterViewController: UIViewController {
 
@@ -29,13 +31,17 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerDescLabel: UILabel!
     @IBOutlet weak var alreadyHaveAccountTextView: UITextView!
     
+    let registerSuccess = PublishRelay<Void>()
+    let registerFailed = PublishRelay<Void>()
     var presenter: RegisterViewToPresenterProtocol?
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         
         configureKeyboard()
+        configureObservable()
         configureRegisterButton()
         configureRegisterDescLabel()
         configureRegisterTitleLabel()
@@ -48,7 +54,23 @@ class RegisterViewController: UIViewController {
         configureTextField(for: nameTextField)
         configureTextField(for: emailTextField)
         configureTextField(for: passwordTextField, securityTextEnable: true, clearEnable: false)
+    }
+    
+    /// Configure `Observable`
+    private func configureObservable() {
+        registerSuccess.subscribe(onNext: { [weak self] in
+            let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: LoginString.loginTitle, style: UIAlertAction.Style.default, handler: { _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self?.present(alert, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
         
+        registerFailed.subscribe(onNext: { [weak self] in
+            let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
     }
     
     /// Configure `Keyboard`
@@ -176,7 +198,6 @@ class RegisterViewController: UIViewController {
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        
         presenter?.registerProcess(name: name, email: email, password: password, avatar: "https://picsum.photos/800")
     }
     
@@ -210,19 +231,6 @@ class RegisterViewController: UIViewController {
 
 // MARK: Presenter to View Protocol
 extension RegisterViewController: RegisterPresenterToViewProtocol {
-    func registerSuccess() {
-        let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: LoginString.loginTitle, style: UIAlertAction.Style.default, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func registerFailed() {
-        let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
 }
 
 // MARK: Text View Delegate

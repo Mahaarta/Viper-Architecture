@@ -5,10 +5,12 @@
 //  Created by Minata on 19/12/2023.
 //
 
+import RxSwift
+import RxCocoa
 
 protocol RegisterPresenterToViewProtocol: Any {
     
-    func registerSuccess()
-    func registerFailed()
+    var registerSuccess: PublishRelay<Void> { get }
+    var registerFailed: PublishRelay<Void> { get }
     
 }
