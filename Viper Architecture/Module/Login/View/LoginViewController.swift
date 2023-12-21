@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
     
@@ -21,10 +23,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var dontHaveAccountTextView: UITextView!
     
     var presenter: LoginViewToPresenterProtocol?
+    let loginSuccess = PublishRelay<Void>()
+    let showError = PublishRelay<Void>()
+    let navigateToRegister = PublishRelay<Void>()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureObservable()
         configureKeyboard()
         configureLoginTitleLabel()
         configureLoginDescLabel()
@@ -36,11 +43,25 @@ class LoginViewController: UIViewController {
         configureAlreadHasAccountLabel()
     }
     
+    /// Configure `Observable`
+    private func configureObservable() {
+        loginSuccess.subscribe(onNext: { [weak self] in
+            let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: Application.okay, style: UIAlertAction.Style.default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        showError.subscribe(onNext: { [weak self] in
+            let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+    }
+    
     /// Configure `Keyboard`
     private func configureKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
     
     /// Configure `Login Title`
@@ -65,6 +86,7 @@ class LoginViewController: UIViewController {
         usernameLabel.textAlignment = .left
     }
     
+    /// Configure `Username TextView`
     private func configureUsernameTextView() {
         usernameTextView.autocorrectionType = .no
         usernameTextView.clearButtonMode = .whileEditing
@@ -168,11 +190,10 @@ class LoginViewController: UIViewController {
         return nil
     }
     
-// MARK: Action
+    // MARK: Action
     @objc func loginButtonTapped() {
         usernameTextView.text = "mor_2314"
         passwordTextView.text = "83r5^_"
-        
         presenter?.loginProcess(username: "mor_2314", password: "83r5^_")
     }
     
@@ -200,29 +221,14 @@ class LoginViewController: UIViewController {
     
 }
 
-// MARK: - LiveNewsListPresenterToViewProtocol
+// MARK: - Presenter to View
 extension LoginViewController: LoginPresenterToViewProtocol {
-    func loginSuccess() {
-        let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Application.okay, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func showError() {
-        let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func navigateToRegister() {
-        presenter?.navigateToRegister()
-    }
 }
 
 // MARK: Delegate - TextView
 extension LoginViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        navigateToRegister()
+        presenter?.navigateToRegister()
         return false
     }
 }

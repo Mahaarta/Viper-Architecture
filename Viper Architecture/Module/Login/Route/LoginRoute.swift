@@ -10,10 +10,10 @@ import UIKit
 class LoginRoute: LoginPresenterToRouterProtocol {
     
     static func createModule() -> UIViewController {
+        let router = LoginRoute()
         let view = LoginViewController()
-        var presenter: LoginViewToPresenterProtocol & LoginInteractorToPresenterProtocol = LoginPresenter()
-        var interactor: LoginPresenterToInteractorProtocol = LoginInteractor()
-        let router: LoginPresenterToRouterProtocol = LoginRoute()
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter(view: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         presenter.view = view
