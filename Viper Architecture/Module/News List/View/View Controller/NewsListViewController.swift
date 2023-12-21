@@ -6,36 +6,64 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import Alamofire
 
 class NewsListViewController: UIViewController {
 
-    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - Properties
+    let showError = PublishRelay<Void>()
+    let reloadData = PublishRelay<Void>()
     var presenter: NewsListViewToPresenterProtocol?
-    
-    // MARK: - Methods
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpTableView()
-        
-        presenter?.updateView()
-        
+        configureObservable()
+        presenter?.updateView(source: "tech")
     }
     
+    /// Configure `Observable`
+    private func configureObservable() {
+        reloadData.subscribe(onNext: { [weak self] in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        showError.subscribe(onNext: { [weak self] in
+            self?.showErrorAlert()
+        }).disposed(by: disposeBag)
+    }
+    
+    /// Configure `TableView`
     private func setUpTableView() {
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.tableFooterView = UIView()
-        
         tableView.register(UINib(nibName: "NewsListTableViewCell", bundle: .main), forCellReuseIdentifier: "NewsListTableViewCell")
     }
+    
+    /// Configure `Alert View`
+    private func showErrorAlert() {
+        let alert = UIAlertController(
+            title: Application.whoops,
+            message: News.problemFetchingNews,
+            preferredStyle: UIAlertController.Style.alert
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: Application.okay,
+            style: UIAlertAction.Style.default,
+            handler: nil)
+        )
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
-// MARK: - UITableViewDataSource
+// MARK: - TableView DataSource
 extension NewsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getNewsListCount() ?? 0
@@ -46,29 +74,29 @@ extension NewsListViewController: UITableViewDataSource {
         let row = indexPath.row
         let news = presenter?.getNewsList(at: row)
         
-        guard let title = news?.title, let author = news?.author, let description = news?.description else {
+        guard let title = news?.title, let description = news?.description else {
             return cell ?? UITableViewCell()
         }
         
-        cell?.setCell(title: title, author: author, description: description)
+        cell?.setCell(title: title, description: description)
         return cell ?? UITableViewCell()
     }
 }
 
-// MARK: - UITableViewDelegate
-extension NewsListViewController: UITableViewDelegate {}
-
-// MARK: - LiveNewsListPresenterToViewProtocol
+// MARK: Presenter to View
 extension NewsListViewController: NewsListPresenterToViewProtocol {
-    
-    func showNewsList() {
-        tableView.reloadData()
+}
+
+// MARK: Localization
+extension NewsListViewController {
+    struct Application {
+        static let nice = localizedString(StructLocalization.Application.nice)
+        static let back = localizedString(StructLocalization.Application.back)
+        static let okay = localizedString(StructLocalization.Application.back)
+        static let whoops = localizedString(StructLocalization.Application.whoops)
     }
     
-    func showError() {
-        let alert = UIAlertController(title: "Alert", message: "Problem Fetching News", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    struct News {
+        static let problemFetchingNews = localizedString(StructLocalization.News.problemFetchingNews)
     }
-    
 }

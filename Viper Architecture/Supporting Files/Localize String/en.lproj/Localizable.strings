@@ -33,3 +33,6 @@
 "email" = "Email";
 "userName" = "User Name";
 "password" = "Password";
+
+// MARK: News
+"problem-fetching-news" = "Problem Fetching News";

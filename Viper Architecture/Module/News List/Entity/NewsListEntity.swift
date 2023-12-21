@@ -6,10 +6,9 @@
 //
 
 struct NewsListEntity: Codable {
-    let author: String?
+    let language: String?
     let title: String?
     let description: String?
-    let url: String?
-    let urlToImage: String?
-    let publishedAt: String?
+    let image_url: String?
+    let content: String?
 }

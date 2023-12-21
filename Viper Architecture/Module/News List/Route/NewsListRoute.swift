@@ -10,15 +10,15 @@ import UIKit
 class NewsListRoute: NewsListPresenterToRouterProtocol {
     
     static func createModule() -> UIViewController {
+        let router = NewsListRoute()
         let view = NewsListViewController()
-        var presenter: NewsListViewToPresenterProtocol & NewsListInteractorToPresenterProtocol = NewsListPresenter()
-        var interactor: NewsListPresenterToInteractorProtocol = NewsListInteractor()
-        let router: NewsListPresenterToRouterProtocol = NewsListRoute()
+        let interactor = NewsListInteractor()
+        let presenter = NewsListPresenter(view: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         presenter.view = view
-        presenter.router = router
         presenter.interactor = interactor
+        presenter.router = router
         interactor.presenter = presenter
         
         return view

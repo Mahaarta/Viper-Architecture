@@ -10,7 +10,7 @@ protocol NewsListViewToPresenterProtocol: Any {
     var interactor: NewsListPresenterToInteractorProtocol? { get set }
     var router: NewsListPresenterToRouterProtocol? { get set }
     
-    func updateView()
+    func updateView(source: String)
     func getNewsListCount() -> Int?
     func getNewsList(at index: Int) -> NewsListEntity?
 }
