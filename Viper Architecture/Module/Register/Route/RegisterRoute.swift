@@ -10,10 +10,10 @@ import UIKit
 class RegisterRoute: RegisterPresenterToRouterProtocol {
     
     static func createModule() -> UIViewController {
+        let router = RegisterRoute()
         let view = RegisterViewController()
-        var presenter: RegisterViewToPresenterProtocol & RegisterInteractorToPresenterProtocol = RegisterPresenter()
-        var interactor: RegisterPresenterToInteractorProtocol = RegisterInteractor()
-        let router: RegisterPresenterToRouterProtocol = RegisterRoute()
+        let interactor = RegisterInteractor()
+        let presenter = RegisterPresenter(view: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         presenter.view = view

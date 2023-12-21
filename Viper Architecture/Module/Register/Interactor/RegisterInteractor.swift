@@ -13,7 +13,7 @@ class RegisterInteractor: RegisterPresenterToInteractorProtocol {
     var registerData: RegisterEntity?
     
     private func getPath() -> String {
-        return LoginBaseEndpoint.getBasePath() + "v1/"
+        return RegisterBaseEndpoint.getBasePath() + "v1/"
     }
     
     func registerProcess(name: String, email: String, password: String, avatar: String) {
