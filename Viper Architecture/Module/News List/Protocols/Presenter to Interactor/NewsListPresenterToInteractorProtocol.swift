@@ -12,5 +12,5 @@ protocol NewsListPresenterToInteractorProtocol: Any {
     var presenter: NewsListInteractorToPresenterProtocol? { get set }
     var newsListDatas: [NewsListEntity]? { get }
     
-    func fetchNewsList()
+    func fetchNewsList(source: String)
 }

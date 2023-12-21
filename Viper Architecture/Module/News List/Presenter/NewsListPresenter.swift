@@ -5,6 +5,8 @@
 //  Created by Minata on 15/12/2023.
 //
 
+import RxSwift
+import RxCocoa
 import Foundation
 
 class NewsListPresenter: NewsListViewToPresenterProtocol {
@@ -12,9 +14,16 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
     var view: NewsListPresenterToViewProtocol?
     var interactor: NewsListPresenterToInteractorProtocol?
     var router: NewsListPresenterToRouterProtocol?
+    private let disposeBag = DisposeBag()
     
-    func updateView() {
-        interactor?.fetchNewsList()
+    init(view: NewsListPresenterToViewProtocol, interactor: NewsListPresenterToInteractorProtocol, router: NewsListPresenterToRouterProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+    
+    func updateView(source: String) {
+        interactor?.fetchNewsList(source: source)
     }
     
     func getNewsListCount() -> Int? {
@@ -29,11 +38,11 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
 extension NewsListPresenter: NewsListInteractorToPresenterProtocol {
     
     func newsListFetched() {
-        view?.showNewsList()
+        view?.reloadData.accept(())
     }
     
     func newsListFetchedFailed() {
-        view?.showError()
+        view?.showError.accept(())
     }
     
 }

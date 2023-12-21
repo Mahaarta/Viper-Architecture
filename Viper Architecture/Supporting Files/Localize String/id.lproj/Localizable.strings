@@ -34,3 +34,5 @@
 "userName" = "Nama Pengguna";
 "password" = "Kata Sandi";
 
+// MARK: News
+"problem-fetching-news" = "Terjadi masalah dalam mengambil data berita";

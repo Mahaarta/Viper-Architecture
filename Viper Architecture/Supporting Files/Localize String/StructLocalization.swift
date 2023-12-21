@@ -37,4 +37,8 @@ struct StructLocalization {
         static let password = "password"
     }
     
+    struct News {
+        static let problemFetchingNews = "problem-fetching-news"
+    }
+    
 }

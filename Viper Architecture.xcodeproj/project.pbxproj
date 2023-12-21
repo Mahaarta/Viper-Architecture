@@ -27,6 +27,7 @@
 		0823B9552B319D780076355E /* RegisterPresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */; };
 		0823B9572B31A8750076355E /* RegisterBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
+		0897A06D2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */; };
 		08A408BF2B303E110074BF3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408BD2B303E110074BF3C /* LoginViewController.swift */; };
 		08A408C02B303E110074BF3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A408BE2B303E110074BF3C /* LoginViewController.xib */; };
 		08A408C22B303E3D0074BF3C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C12B303E3D0074BF3C /* LoginInteractor.swift */; };
@@ -35,6 +36,13 @@
 		08DDE3CB2B32EE3B002DAE21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DDE3CD2B32EE3B002DAE21 /* Localizable.strings */; };
 		08DDE3D02B32EE5F002DAE21 /* StructLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */; };
 		08DDE3D32B32F055002DAE21 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3D22B32F055002DAE21 /* LocalizationHelper.swift */; };
+		08DDE3E02B34282E002DAE21 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3DF2B34282E002DAE21 /* Alamofire */; };
+		08DDE3F82B342DA3002DAE21 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3F72B342DA3002DAE21 /* RxCocoa */; };
+		08DDE3FA2B342DA3002DAE21 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3F92B342DA3002DAE21 /* RxCocoa-Dynamic */; };
+		08DDE3FC2B342DA3002DAE21 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3FB2B342DA3002DAE21 /* RxRelay */; };
+		08DDE3FE2B342DA3002DAE21 /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3FD2B342DA3002DAE21 /* RxRelay-Dynamic */; };
+		08DDE4002B342DA3002DAE21 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE3FF2B342DA3002DAE21 /* RxSwift */; };
+		08DDE4022B342DA3002DAE21 /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 08DDE4012B342DA3002DAE21 /* RxSwift-Dynamic */; };
 		08E9578F2B2C02AE006C31AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E9578E2B2C02AE006C31AF /* Assets.xcassets */; };
 		08E957922B2C02AE006C31AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E957912B2C02AE006C31AF /* Preview Assets.xcassets */; };
 		08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9579B2B2C02AE006C31AF /* Viper_ArchitectureTests.swift */; };
@@ -50,7 +58,6 @@
 		08E957D92B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957D82B2C3F44006C31AF /* NewsListPresenterToViewProtocol.swift */; };
 		08E957DB2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957DA2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift */; };
 		08E957DD2B2C4A57006C31AF /* NewsListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957DC2B2C4A57006C31AF /* NewsListEntity.swift */; };
-		08E957E02B2C513C006C31AF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 08E957DF2B2C513C006C31AF /* Alamofire */; };
 		08E957E22B2C5195006C31AF /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E12B2C5195006C31AF /* NewsListInteractor.swift */; };
 		08E957E42B2C5484006C31AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E32B2C5484006C31AF /* Constants.swift */; };
 		08E957E62B2C54D6006C31AF /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E957E52B2C54D6006C31AF /* NewsResponse.swift */; };
@@ -104,6 +111,7 @@
 		0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterToRouterProtocol.swift; sourceTree = "<group>"; };
 		0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBaseEndpoint.swift; sourceTree = "<group>"; };
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListBaseEndpoint.swift; sourceTree = "<group>"; };
 		08A408BD2B303E110074BF3C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A408BE2B303E110074BF3C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		08A408C12B303E3D0074BF3C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -152,7 +160,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E957E02B2C513C006C31AF /* Alamofire in Frameworks */,
+				08DDE4022B342DA3002DAE21 /* RxSwift-Dynamic in Frameworks */,
+				08DDE4002B342DA3002DAE21 /* RxSwift in Frameworks */,
+				08DDE3F82B342DA3002DAE21 /* RxCocoa in Frameworks */,
+				08DDE3FE2B342DA3002DAE21 /* RxRelay-Dynamic in Frameworks */,
+				08DDE3FA2B342DA3002DAE21 /* RxCocoa-Dynamic in Frameworks */,
+				08DDE3FC2B342DA3002DAE21 /* RxRelay in Frameworks */,
+				08DDE3E02B34282E002DAE21 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,13 +292,6 @@
 				0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */,
 			);
 			path = "Presenter to Router";
-			sourceTree = "<group>";
-		};
-		0865F5D52B304BFE00FB1C50 /* Costum Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Costum Views";
 			sourceTree = "<group>";
 		};
 		08A408B52B3038C90074BF3C /* Login */ = {
@@ -470,12 +477,11 @@
 		08E957B62B2C03FB006C31AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				08DDE3C82B32EE15002DAE21 /* Localize String */,
-				0865F5D52B304BFE00FB1C50 /* Costum Views */,
-				08F478C62B30492000362475 /* Custom Fonts */,
-				08F478C22B3046AE00362475 /* Utilities */,
 				08E957B82B2C0425006C31AF /* Assets */,
+				08F478C22B3046AE00362475 /* Utilities */,
 				08E957B72B2C041A006C31AF /* Application */,
+				08F478C62B30492000362475 /* Custom Fonts */,
+				08DDE3C82B32EE15002DAE21 /* Localize String */,
 				08E957F22B2C6620006C31AF /* Launch Screen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -559,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				08E957E72B2C55D7006C31AF /* NewsListRoute.swift */,
+				0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -688,7 +695,13 @@
 			);
 			name = "Viper Architecture";
 			packageProductDependencies = (
-				08E957DF2B2C513C006C31AF /* Alamofire */,
+				08DDE3DF2B34282E002DAE21 /* Alamofire */,
+				08DDE3F72B342DA3002DAE21 /* RxCocoa */,
+				08DDE3F92B342DA3002DAE21 /* RxCocoa-Dynamic */,
+				08DDE3FB2B342DA3002DAE21 /* RxRelay */,
+				08DDE3FD2B342DA3002DAE21 /* RxRelay-Dynamic */,
+				08DDE3FF2B342DA3002DAE21 /* RxSwift */,
+				08DDE4012B342DA3002DAE21 /* RxSwift-Dynamic */,
 			);
 			productName = "Viper Architecture";
 			productReference = 08E957872B2C02AD006C31AF /* Viper Architecture.app */;
@@ -764,7 +777,8 @@
 			);
 			mainGroup = 08E9577E2B2C02AD006C31AF;
 			packageReferences = (
-				08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				08DDE3DE2B34282E002DAE21 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 08E957882B2C02AD006C31AF /* Products */;
 			projectDirPath = "";
@@ -822,6 +836,7 @@
 			files = (
 				0823B93D2B319C600076355E /* RegisterViewController.swift in Sources */,
 				08E957B52B2C035E006C31AF /* AppDelegate.swift in Sources */,
+				0897A06D2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift in Sources */,
 				0823B92D2B316EF40076355E /* LoginPresenterToViewProtocol.swift in Sources */,
 				08E957E82B2C55D7006C31AF /* NewsListRoute.swift in Sources */,
 				08E957E42B2C5484006C31AF /* Constants.swift in Sources */,
@@ -1208,7 +1223,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		08DDE3DE2B34282E002DAE21 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1216,13 +1231,51 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		08E957DF2B2C513C006C31AF /* Alamofire */ = {
+		08DDE3DF2B34282E002DAE21 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 08E957DE2B2C513C006C31AF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 08DDE3DE2B34282E002DAE21 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		08DDE3F72B342DA3002DAE21 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		08DDE3F92B342DA3002DAE21 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		08DDE3FB2B342DA3002DAE21 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		08DDE3FD2B342DA3002DAE21 /* RxRelay-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxRelay-Dynamic";
+		};
+		08DDE3FF2B342DA3002DAE21 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		08DDE4012B342DA3002DAE21 /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -12,6 +12,6 @@ struct NewsResponse: Codable {
     let status: String?
     let source: String?
     let sortBy: String?
-    let articles: [NewsListEntity]?
+    let results: [NewsListEntity]?
     
 }
