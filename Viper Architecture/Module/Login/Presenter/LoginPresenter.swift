@@ -14,6 +14,12 @@ class LoginPresenter: LoginViewToPresenterProtocol {
     var interactor: LoginPresenterToInteractorProtocol?
     var router: LoginPresenterToRouterProtocol?
     
+    init(view: LoginPresenterToViewProtocol, interactor: LoginPresenterToInteractorProtocol, router: LoginPresenterToRouterProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+    
     func loginProcess(username: String, password: String) {
         interactor?.loginProcess(username: username, password: password)
     }
@@ -25,10 +31,10 @@ class LoginPresenter: LoginViewToPresenterProtocol {
 
 extension LoginPresenter: LoginInteractorToPresenterProtocol {
     func loginSuccess() {
-        view?.loginSuccess()
+        view?.loginSuccess.accept(())
     }
     
     func loginFailed() {
-        view?.showError()
+        view?.showError.accept(())
     }
 }
