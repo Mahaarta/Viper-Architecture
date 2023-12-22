@@ -9,8 +9,8 @@ import UIKit
 
 class Button: UIButton {
     
-    var spinner = UIActivityIndicatorView()
-    var isLoading = false {
+    private var spinner = UIActivityIndicatorView()
+    public var isLoading = false {
         didSet {
             updateView()
         }
@@ -26,7 +26,7 @@ class Button: UIButton {
         configureView()
     }
     
-    func configureView() {
+    private func configureView() {
         spinner.color = .white
         spinner.style = .medium
         spinner.hidesWhenStopped = true
@@ -39,18 +39,20 @@ class Button: UIButton {
         ])
     }
     
-    func updateView() {
+    private  func updateView() {
         if isLoading {
             isEnabled = false
             imageView?.alpha = 0
             titleLabel?.alpha = 0
             spinner.startAnimating()
+            backgroundColor = self.backgroundColor?.withAlphaComponent(0.4)
             
         } else {
             isEnabled = true
             imageView?.alpha = 0
             titleLabel?.alpha = 1
             spinner.stopAnimating()
+            backgroundColor = self.backgroundColor?.withAlphaComponent(1.0)
         }
     }
     
