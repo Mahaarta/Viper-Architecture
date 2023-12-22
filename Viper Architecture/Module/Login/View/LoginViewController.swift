@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextView: UITextField!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextView: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: Button!
     @IBOutlet weak var dontHaveAccountTextView: UITextView!
     
     var presenter: LoginViewToPresenterProtocol?
