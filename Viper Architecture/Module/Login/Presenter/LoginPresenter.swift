@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import Foundation
 
 class LoginPresenter: LoginViewToPresenterProtocol {
@@ -13,6 +15,7 @@ class LoginPresenter: LoginViewToPresenterProtocol {
     var view: LoginPresenterToViewProtocol?
     var interactor: LoginPresenterToInteractorProtocol?
     var router: LoginPresenterToRouterProtocol?
+    private let disposeBag = DisposeBag()
     
     init(view: LoginPresenterToViewProtocol, interactor: LoginPresenterToInteractorProtocol, router: LoginPresenterToRouterProtocol) {
         self.view = view
@@ -22,6 +25,14 @@ class LoginPresenter: LoginViewToPresenterProtocol {
     
     func loginProcess(username: String, password: String) {
         interactor?.loginProcess(username: username, password: password)
+            .subscribe(
+                onNext: { [weak self] loginEntity in
+                    self?.loginSuccess(loginEntity: loginEntity)
+                },
+                onError: { [weak self] error in
+                    self?.loginFailed(error: error)
+                }
+            ).disposed(by: disposeBag)
     }
     
     func navigateToRegister() {
@@ -34,11 +45,11 @@ class LoginPresenter: LoginViewToPresenterProtocol {
 }
 
 extension LoginPresenter: LoginInteractorToPresenterProtocol {
-    func loginSuccess() {
+    func loginSuccess(loginEntity: LoginEntity?) {
         view?.loginSuccess.accept(())
     }
     
-    func loginFailed() {
+    func loginFailed(error: Error) {
         view?.showError.accept(())
     }
 }
