@@ -49,12 +49,14 @@ class LoginViewController: UIViewController {
             let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: Application.okay, style: UIAlertAction.Style.default, handler: nil))
             self?.present(alert, animated: true, completion: nil)
+            self?.loginButton.isLoading = false
         }).disposed(by: disposeBag)
         
         showError.subscribe(onNext: { [weak self] in
             let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
             self?.present(alert, animated: true, completion: nil)
+            self?.loginButton.isLoading = false
         }).disposed(by: disposeBag)
     }
     
@@ -88,6 +90,7 @@ class LoginViewController: UIViewController {
     
     /// Configure `Username TextView`
     private func configureUsernameTextView() {
+        usernameTextView.text = "mor_2314"
         usernameTextView.autocorrectionType = .no
         usernameTextView.clearButtonMode = .whileEditing
         usernameTextView.font = FontSans(fontSansType: .regular, fontSize: 14).set()
@@ -102,9 +105,10 @@ class LoginViewController: UIViewController {
     
     /// Configure `password textView`
     private func configurePasswordTextView() {
+        passwordTextView.text = "83r5^_"
         passwordTextView.autocorrectionType = .no
-        passwordTextView.font = FontSans(fontSansType: .regular, fontSize: 14).set()
         passwordTextView.isSecureTextEntry = true
+        passwordTextView.font = FontSans(fontSansType: .regular, fontSize: 14).set()
     }
     
     /// Configure `Login Button`
@@ -192,8 +196,7 @@ class LoginViewController: UIViewController {
     
     // MARK: Action
     @objc func loginButtonTapped() {
-        usernameTextView.text = "mor_2314"
-        passwordTextView.text = "83r5^_"
+        loginButton.isLoading = true
         presenter?.loginProcess(username: "mor_2314", password: "83r5^_")
     }
     
