@@ -29,6 +29,11 @@
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
 		0897A06D2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */; };
 		0897A0712B3545B700D4C8D9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0702B3545B700D4C8D9 /* Button.swift */; };
+		0897A07A2B35887D00D4C8D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0792B35887D00D4C8D9 /* NetworkManager.swift */; };
+		0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0802B35A50100D4C8D9 /* MockNetworkManager.swift */; };
+		0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0822B35ACAD00D4C8D9 /* NetworkManagerTest.swift */; };
+		0897A0852B35ACDD00D4C8D9 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0897A0842B35ACDD00D4C8D9 /* RxTest */; };
+		0897A0872B35ACDD00D4C8D9 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0897A0862B35ACDD00D4C8D9 /* RxTest-Dynamic */; };
 		08A408BF2B303E110074BF3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408BD2B303E110074BF3C /* LoginViewController.swift */; };
 		08A408C02B303E110074BF3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A408BE2B303E110074BF3C /* LoginViewController.xib */; };
 		08A408C22B303E3D0074BF3C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C12B303E3D0074BF3C /* LoginInteractor.swift */; };
@@ -114,6 +119,9 @@
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListBaseEndpoint.swift; sourceTree = "<group>"; };
 		0897A0702B3545B700D4C8D9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		0897A0792B35887D00D4C8D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0897A0802B35A50100D4C8D9 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		0897A0822B35ACAD00D4C8D9 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		08A408BD2B303E110074BF3C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A408BE2B303E110074BF3C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		08A408C12B303E3D0074BF3C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0897A0872B35ACDD00D4C8D9 /* RxTest-Dynamic in Frameworks */,
+				0897A0852B35ACDD00D4C8D9 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +320,39 @@
 				0897A0702B3545B700D4C8D9 /* Button.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		0897A0722B357DBB00D4C8D9 /* Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				0897A0732B357E5600D4C8D9 /* Network Manager Test */,
+			);
+			path = "Unit Test";
+			sourceTree = "<group>";
+		};
+		0897A0732B357E5600D4C8D9 /* Network Manager Test */ = {
+			isa = PBXGroup;
+			children = (
+				0897A07F2B35A4DA00D4C8D9 /* Mock */,
+				0897A0822B35ACAD00D4C8D9 /* NetworkManagerTest.swift */,
+			);
+			path = "Network Manager Test";
+			sourceTree = "<group>";
+		};
+		0897A0782B35886900D4C8D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0897A0792B35887D00D4C8D9 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0897A07F2B35A4DA00D4C8D9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0897A0802B35A50100D4C8D9 /* MockNetworkManager.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		08A408B52B3038C90074BF3C /* Login */ = {
@@ -478,6 +521,7 @@
 		08E9579A2B2C02AE006C31AF /* Viper ArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
+				0897A0722B357DBB00D4C8D9 /* Unit Test */,
 				08E9579B2B2C02AE006C31AF /* Viper_ArchitectureTests.swift */,
 			);
 			path = "Viper ArchitectureTests";
@@ -496,7 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				08E957B82B2C0425006C31AF /* Assets */,
-				08F478C22B3046AE00362475 /* Utilities */,
+				08DDE3D12B32F046002DAE21 /* Localize */,
+				0897A0782B35886900D4C8D9 /* Network */,
 				08E957B72B2C041A006C31AF /* Application */,
 				0897A06E2B3544D100D4C8D9 /* Custom View */,
 				08F478C62B30492000362475 /* Custom Fonts */,
@@ -659,22 +704,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		08F478C22B3046AE00362475 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				08DDE3D12B32F046002DAE21 /* Localize */,
-				08F478C32B3046BC00362475 /* Custom Views */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		08F478C32B3046BC00362475 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Views";
-			sourceTree = "<group>";
-		};
 		08F478C62B30492000362475 /* Custom Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +769,10 @@
 				08E957992B2C02AE006C31AF /* PBXTargetDependency */,
 			);
 			name = "Viper ArchitectureTests";
+			packageProductDependencies = (
+				0897A0842B35ACDD00D4C8D9 /* RxTest */,
+				0897A0862B35ACDD00D4C8D9 /* RxTest-Dynamic */,
+			);
 			productName = "Viper ArchitectureTests";
 			productReference = 08E957972B2C02AE006C31AF /* Viper ArchitectureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -877,6 +910,7 @@
 				0823B92F2B316EFF0076355E /* LoginInteractorToPresenterProtocol.swift in Sources */,
 				0823B9402B319C740076355E /* RegisterInteractor.swift in Sources */,
 				08A408C42B303EB70074BF3C /* LoginPresenter.swift in Sources */,
+				0897A07A2B35887D00D4C8D9 /* NetworkManager.swift in Sources */,
 				08E957D72B2C3F22006C31AF /* NewsListInteractorToPresenterProtocol.swift in Sources */,
 				0823B9512B319D620076355E /* RegisterInteractorToPresenterProtocol.swift in Sources */,
 				0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */,
@@ -901,6 +935,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */,
+				0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */,
 				08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1262,6 +1298,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0897A0842B35ACDD00D4C8D9 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		0897A0862B35ACDD00D4C8D9 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
 		08DDE3DF2B34282E002DAE21 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08DDE3DE2B34282E002DAE21 /* XCRemoteSwiftPackageReference "Alamofire" */;
