@@ -28,6 +28,7 @@
 		0823B9572B31A8750076355E /* RegisterBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
 		0897A06D2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */; };
+		0897A0712B3545B700D4C8D9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0702B3545B700D4C8D9 /* Button.swift */; };
 		08A408BF2B303E110074BF3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408BD2B303E110074BF3C /* LoginViewController.swift */; };
 		08A408C02B303E110074BF3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A408BE2B303E110074BF3C /* LoginViewController.xib */; };
 		08A408C22B303E3D0074BF3C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C12B303E3D0074BF3C /* LoginInteractor.swift */; };
@@ -112,6 +113,7 @@
 		0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBaseEndpoint.swift; sourceTree = "<group>"; };
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListBaseEndpoint.swift; sourceTree = "<group>"; };
+		0897A0702B3545B700D4C8D9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		08A408BD2B303E110074BF3C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A408BE2B303E110074BF3C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		08A408C12B303E3D0074BF3C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -292,6 +294,22 @@
 				0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */,
 			);
 			path = "Presenter to Router";
+			sourceTree = "<group>";
+		};
+		0897A06E2B3544D100D4C8D9 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				0897A06F2B3544DA00D4C8D9 /* Button */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		0897A06F2B3544DA00D4C8D9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				0897A0702B3545B700D4C8D9 /* Button.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		08A408B52B3038C90074BF3C /* Login */ = {
@@ -480,6 +498,7 @@
 				08E957B82B2C0425006C31AF /* Assets */,
 				08F478C22B3046AE00362475 /* Utilities */,
 				08E957B72B2C041A006C31AF /* Application */,
+				0897A06E2B3544D100D4C8D9 /* Custom View */,
 				08F478C62B30492000362475 /* Custom Fonts */,
 				08DDE3C82B32EE15002DAE21 /* Localize String */,
 				08E957F22B2C6620006C31AF /* Launch Screen.storyboard */,
@@ -848,6 +867,7 @@
 				08E957DB2B2C3F64006C31AF /* NewsListPresenterToRouterProtocol.swift in Sources */,
 				0823B9462B319C8C0076355E /* RegisterRoute.swift in Sources */,
 				0823B9272B316ED60076355E /* LoginViewToPresenterProtocol.swift in Sources */,
+				0897A0712B3545B700D4C8D9 /* Button.swift in Sources */,
 				08E957D32B2C3E0F006C31AF /* NewsListViewToPresenterProtocol.swift in Sources */,
 				0823B94D2B319D470076355E /* RegisterViewToPresenterProtocol.swift in Sources */,
 				08E957C72B2C0A2A006C31AF /* NewsListViewController.swift in Sources */,
