@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     /// Other View
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var registerButton: Button!
     @IBOutlet weak var registerTitleLabel: UILabel!
     @IBOutlet weak var registerDescLabel: UILabel!
     @IBOutlet weak var alreadyHaveAccountTextView: UITextView!
@@ -64,12 +64,14 @@ class RegisterViewController: UIViewController {
                 self?.navigationController?.popViewController(animated: true)
             }))
             self?.present(alert, animated: true, completion: nil)
+            self?.registerButton.isLoading = false
         }).disposed(by: disposeBag)
         
         registerFailed.subscribe(onNext: { [weak self] in
             let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
             self?.present(alert, animated: true, completion: nil)
+            self?.registerButton.isLoading = false
         }).disposed(by: disposeBag)
     }
     
@@ -195,6 +197,8 @@ class RegisterViewController: UIViewController {
     
     // MARK: Action
     @objc func registerButtonTapped() {
+        registerButton.isLoading = true
+        
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
