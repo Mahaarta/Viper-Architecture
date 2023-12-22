@@ -52,8 +52,10 @@ class NewsListViewController: UIViewController {
     /// Configure `Loading Spinner`
     private func confifureLoadingSpinner(isLoading: Bool = true) {
         if isLoading {
+            spinner.isHidden = false
             spinner.startAnimating()
         } else {
+            spinner.isHidden = true
             spinner.stopAnimating()
         }
     }
