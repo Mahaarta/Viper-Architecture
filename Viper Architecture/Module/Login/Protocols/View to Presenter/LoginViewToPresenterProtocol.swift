@@ -15,5 +15,6 @@ protocol LoginViewToPresenterProtocol: Any {
     
     func loginProcess(username: String, password: String)
     func navigateToRegister()
+    func navigateToDashboard()
     
 }

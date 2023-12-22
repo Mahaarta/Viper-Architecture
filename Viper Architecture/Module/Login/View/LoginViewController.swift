@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     let loginSuccess = PublishRelay<Void>()
     let showError = PublishRelay<Void>()
     let navigateToRegister = PublishRelay<Void>()
+    let navigateToDashboard = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -46,9 +47,7 @@ class LoginViewController: UIViewController {
     /// Configure `Observable`
     private func configureObservable() {
         loginSuccess.subscribe(onNext: { [weak self] in
-            let alert = UIAlertController(title: Application.nice, message: LoginString.loginSuccess, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: Application.okay, style: UIAlertAction.Style.default, handler: nil))
-            self?.present(alert, animated: true, completion: nil)
+            self?.presenter?.navigateToDashboard()
             self?.loginButton.isLoading = false
         }).disposed(by: disposeBag)
         
@@ -261,6 +260,7 @@ extension LoginViewController {
     struct Register {
         static let signup = localizedString(StructLocalization.Register.signUp)
     }
+
 }
 
 @available(iOS 17.0, *)

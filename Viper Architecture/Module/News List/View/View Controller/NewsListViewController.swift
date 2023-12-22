@@ -13,6 +13,7 @@ import Alamofire
 class NewsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     let showError = PublishRelay<Void>()
     let reloadData = PublishRelay<Void>()
@@ -21,15 +22,18 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = News.newsList
         
         setUpTableView()
         configureObservable()
+        confifureLoadingSpinner()
         presenter?.updateView(source: "tech")
     }
     
     /// Configure `Observable`
     private func configureObservable() {
         reloadData.subscribe(onNext: { [weak self] in
+            self?.confifureLoadingSpinner(isLoading: false)
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
         
@@ -43,6 +47,15 @@ class NewsListViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: "NewsListTableViewCell", bundle: .main), forCellReuseIdentifier: "NewsListTableViewCell")
+    }
+    
+    /// Configure `Loading Spinner`
+    private func confifureLoadingSpinner(isLoading: Bool = true) {
+        if isLoading {
+            spinner.startAnimating()
+        } else {
+            spinner.stopAnimating()
+        }
     }
     
     /// Configure `Alert View`
@@ -97,6 +110,8 @@ extension NewsListViewController {
     }
     
     struct News {
+        static let newsList = localizedString(StructLocalization.News.newsList)
         static let problemFetchingNews = localizedString(StructLocalization.News.problemFetchingNews)
     }
+    
 }
