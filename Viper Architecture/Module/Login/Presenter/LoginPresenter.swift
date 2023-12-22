@@ -27,6 +27,10 @@ class LoginPresenter: LoginViewToPresenterProtocol {
     func navigateToRegister() {
         router?.navigateToRegister(from: view)
     }
+    
+    func navigateToDashboard() {
+        router?.navigateToDashboard(from: view)
+    }
 }
 
 extension LoginPresenter: LoginInteractorToPresenterProtocol {
