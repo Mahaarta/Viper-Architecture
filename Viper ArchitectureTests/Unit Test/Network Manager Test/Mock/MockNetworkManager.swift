@@ -17,7 +17,7 @@ struct MockResponse: Codable, Equatable {
 class MockNetworkManager: NetworkManagerProtocol {
     var shouldSucceed: Bool = true
 
-    func excuteQuery<T>(url: URL, method: HTTPMethod, parameters: Parameters?) -> Observable<T> where T: Codable {
+    func excuteQuery<T>(url: URL, method: HTTPMethod, parameters: Parameters?) -> Observable<T> where T : Decodable, T : Encodable {
         return Observable.create { observer in
             
             if self.shouldSucceed {
@@ -28,9 +28,6 @@ class MockNetworkManager: NetworkManagerProtocol {
                     if let decodedData = try? JSONDecoder().decode(T.self, from: encodedData) {
                         observer.onNext(decodedData)
                         observer.onCompleted()
-                    } else {
-                        let error = NSError(domain: "MockErrorDomain", code: 42, userInfo: nil)
-                        observer.onError(error)
                     }
                 } catch {
                     observer.onError(error)
@@ -38,7 +35,7 @@ class MockNetworkManager: NetworkManagerProtocol {
                 
             } else {
                 /// Simulate `Failure Response`
-                let error = NSError(domain: "MockErrorDomain", code: 42, userInfo: nil)
+                let error = NSError(domain: "MockErrorDomain", code: 43, userInfo: nil)
                 observer.onError(error)
             }
 
@@ -57,9 +54,6 @@ class MockNetworkManager: NetworkManagerProtocol {
                     if let decodedData = try? JSONDecoder().decode(T.self, from: encodedData) {
                         observer.onNext(decodedData)
                         observer.onCompleted()
-                    } else {
-                        let error = NSError(domain: "MockErrorDomain", code: 42, userInfo: nil)
-                        observer.onError(error)
                     }
                 } catch {
                     observer.onError(error)
@@ -67,7 +61,7 @@ class MockNetworkManager: NetworkManagerProtocol {
                 
             } else {
                 /// Simulate `Failure Response`
-                let error = NSError(domain: "MockErrorDomain", code: 42, userInfo: nil)
+                let error = NSError(domain: "MockErrorDomain", code: 43, userInfo: nil)
                 observer.onError(error)
             }
 

@@ -71,6 +71,7 @@ final class NetworkManagerTest: XCTestCase {
     }
     
     
+    /// Test `Network With Encoding Success`
     func testNetworkManagerWithEncodingSuccess() {
         mockManager.shouldSucceed = true
         
@@ -93,6 +94,7 @@ final class NetworkManagerTest: XCTestCase {
         ])
     }
     
+    /// Test `Network With Encoding Failed`
     func testNetworkManagerWithEncodingFailed() {
         mockManager.shouldSucceed = false
         
@@ -112,6 +114,30 @@ final class NetworkManagerTest: XCTestCase {
         XCTAssertEqual(observer.events, [
             Recorded.error(0, NSError(domain: "MockErrorDomain", code: 42, userInfo: nil))
         ])
+    }
+    
+    /// Test `Network Decode Failed`
+    func testDecodeFailure() {
+        mockManager.shouldSucceed = false
+        
+        let url = URL(string: "https://example.com")!
+        let method: HTTPMethod = .get
+        let parameters: Parameters? = nil
+        let observable: Observable<MockResponse> = mockManager.excuteQuery(url: url, method: method, parameters: parameters)
+        let expectation = self.expectation(description: "Decode failure")
+        let mockError = NSError(domain: "MockErrorDomain", code: 43, userInfo: nil)
+        
+        _ = observable.subscribe(
+            onError: { error in
+                XCTAssertEqual(error as NSError, mockError)
+                expectation.fulfill()
+            },
+            onCompleted: {
+                XCTFail("Observable should not complete successfully")
+            }
+        ).disposed(by: DisposeBag())
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
     
 }

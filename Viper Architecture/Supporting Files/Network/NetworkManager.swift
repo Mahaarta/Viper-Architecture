@@ -28,7 +28,7 @@ protocol NetworkManagerProtocol: Any {
 class NetworkManager: NetworkManagerProtocol {
     static let shared = NetworkManager()
     
-    func excuteQuery<T>(url: URL, method: Alamofire.HTTPMethod, parameters: Alamofire.Parameters?) -> RxSwift.Observable<T> where T: Codable {
+    func excuteQuery<T>(url: URL, method: HTTPMethod, parameters: Parameters?) -> RxSwift.Observable<T> where T: Codable {
         return Observable.create({ observer in
             let headers: HTTPHeaders = [
                 "Accept": "application/json",

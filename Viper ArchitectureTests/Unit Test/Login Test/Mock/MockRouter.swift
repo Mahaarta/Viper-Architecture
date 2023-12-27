@@ -21,7 +21,9 @@ class MockRouter: LoginRoute {
     
     override func navigateToDashboard(from view: LoginPresenterToViewProtocol?) {
         super.navigateToDashboard(from: view)
+        let lastView = RegisterRoute.createModule()
         navigateToDashboardCalled = true
+        removeAllViewControllerExceptLast(view, lastView: lastView)
     }
     
 }

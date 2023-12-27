@@ -20,12 +20,7 @@ class MockView: UIViewController, LoginPresenterToViewProtocol {
     var loginEntity: LoginEntity = LoginEntity(token: "mock_token")
     var error: NSError = NSError(domain: "MockErrorDomain", code: 42, userInfo: nil)
     
-    override var navigationController: UINavigationController? {
-        return mockNavigationController
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mockNavigationController = UINavigationController(rootViewController: self)
     }
 }
