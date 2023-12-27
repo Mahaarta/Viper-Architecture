@@ -42,6 +42,9 @@
 		08B09BB42B3C0ABF00FC85CA /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BB32B3C0ABF00FC85CA /* LoginPresenterTest.swift */; };
 		08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBA2B3C0C2E00FC85CA /* MockView.swift */; };
 		08B09BBD2B3C0C6E00FC85CA /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBC2B3C0C6E00FC85CA /* MockRouter.swift */; };
+		08B09BBF2B3C16B300FC85CA /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBE2B3C16B300FC85CA /* MockPresenter.swift */; };
+		08B09BC12B3C171B00FC85CA /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BC02B3C171B00FC85CA /* LoginInteractorTest.swift */; };
+		08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BC22B3C20B500FC85CA /* MockInteractor.swift */; };
 		08DDE3CB2B32EE3B002DAE21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DDE3CD2B32EE3B002DAE21 /* Localizable.strings */; };
 		08DDE3D02B32EE5F002DAE21 /* StructLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */; };
 		08DDE3D32B32F055002DAE21 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3D22B32F055002DAE21 /* LocalizationHelper.swift */; };
@@ -133,6 +136,9 @@
 		08B09BB32B3C0ABF00FC85CA /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		08B09BBA2B3C0C2E00FC85CA /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		08B09BBC2B3C0C6E00FC85CA /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		08B09BBE2B3C16B300FC85CA /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		08B09BC02B3C171B00FC85CA /* LoginInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
+		08B09BC22B3C20B500FC85CA /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
 		08DDE3CC2B32EE3B002DAE21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DDE3CE2B32EE3E002DAE21 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLocalization.swift; sourceTree = "<group>"; };
@@ -474,6 +480,7 @@
 			children = (
 				08B09BB62B3C0BCF00FC85CA /* Mock */,
 				08B09BB32B3C0ABF00FC85CA /* LoginPresenterTest.swift */,
+				08B09BC02B3C171B00FC85CA /* LoginInteractorTest.swift */,
 			);
 			path = "Login Test";
 			sourceTree = "<group>";
@@ -483,6 +490,8 @@
 			children = (
 				08B09BBA2B3C0C2E00FC85CA /* MockView.swift */,
 				08B09BBC2B3C0C6E00FC85CA /* MockRouter.swift */,
+				08B09BBE2B3C16B300FC85CA /* MockPresenter.swift */,
+				08B09BC22B3C20B500FC85CA /* MockInteractor.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -960,10 +969,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B09BC12B3C171B00FC85CA /* LoginInteractorTest.swift in Sources */,
 				08B09BBD2B3C0C6E00FC85CA /* MockRouter.swift in Sources */,
 				08B09BB42B3C0ABF00FC85CA /* LoginPresenterTest.swift in Sources */,
+				08B09BBF2B3C16B300FC85CA /* MockPresenter.swift in Sources */,
 				0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */,
 				0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */,
+				08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */,
 				08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */,
 				08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */,
 			);

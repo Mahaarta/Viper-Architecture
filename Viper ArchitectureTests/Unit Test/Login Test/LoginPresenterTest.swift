@@ -12,18 +12,6 @@ import RxCocoa
 
 final class LoginPresenterTest: XCTestCase {
     
-    class MockInteractor: LoginPresenterToInteractorProtocol {
-        var presenter: LoginInteractorToPresenterProtocol?
-        var loginSuccess: Bool?
-        var loginProcessCalled = false
-        var result: Observable<LoginEntity?> = Observable.empty()
-        
-        func loginProcess(username: String, password: String) -> Observable<LoginEntity?> {
-            loginProcessCalled = true
-            return result
-        }
-    }
-    
     /// Configure `Login Process Success`
     func testLoginProcessSuccess() {
         let mockView = MockView()
@@ -53,5 +41,29 @@ final class LoginPresenterTest: XCTestCase {
         XCTAssertTrue(mockInteractor.loginProcessCalled)
         XCTAssertEqual(mockView.error, mockError)
     }
+    
+    /// Configure `Navigate to Register`
+    func testNavigateToRegister() {
+        let mockView = MockView()
+        let interactor = LoginInteractor()
+        let mockRouter = MockRouter()
+        let presenter = LoginPresenter(view: mockView, interactor: interactor, router: mockRouter)
+        
+        presenter.navigateToRegister()
+        
+        XCTAssertTrue(mockRouter.navigateToRegisterCalled)
+    }
 
+    /// Configure `Navigate to Dashboard`
+    func testNavigateToDashboard() {
+        let mockView = MockView()
+        let interactor = LoginInteractor()
+        let mockRouter = MockRouter()
+        let presenter = LoginPresenter(view: mockView, interactor: interactor, router: mockRouter)
+        
+        presenter.navigateToDashboard()
+        
+        XCTAssertTrue(mockRouter.navigateToDashboardCalled)
+    }
+    
 }
