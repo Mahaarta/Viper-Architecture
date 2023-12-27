@@ -12,10 +12,16 @@ import XCTest
 class MockRouter: LoginRoute {
     
     var navigateToRegisterCalled = false
+    var navigateToDashboardCalled = false
     
     override func navigateToRegister(from view: LoginPresenterToViewProtocol?) {
         super.navigateToRegister(from: view)
         navigateToRegisterCalled = true
+    }
+    
+    override func navigateToDashboard(from view: LoginPresenterToViewProtocol?) {
+        super.navigateToDashboard(from: view)
+        navigateToDashboardCalled = true
     }
     
 }
