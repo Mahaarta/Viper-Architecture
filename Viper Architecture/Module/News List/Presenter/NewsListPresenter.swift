@@ -24,6 +24,13 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
     
     func updateView(source: String) {
         interactor?.fetchNewsList(source: source)
+            .subscribe(
+                onNext: { [weak self] fetchedNews in
+                    self?.newsListFetched(newsData: fetchedNews)
+                }, onError: { [weak self] error in
+                    self?.newsListFetchedFailed()
+                }
+            ).disposed(by: disposeBag)
     }
     
     func getNewsListCount() -> Int? {
@@ -37,7 +44,8 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
 
 extension NewsListPresenter: NewsListInteractorToPresenterProtocol {
     
-    func newsListFetched() {
+    func newsListFetched(newsData: NewsResponse?) {
+        interactor?.newsListDatas = newsData?.results
         view?.reloadData.accept(())
     }
     

@@ -66,7 +66,7 @@ final class NetworkManagerTest: XCTestCase {
         
         /// Assert the expected values or errors using observer events
         XCTAssertEqual(observer.events, [
-            Recorded.error(0, NSError(domain: "MockErrorDomain", code: 42, userInfo: nil))
+            Recorded.error(0, NSError(domain: "MockErrorDomain", code: 43, userInfo: nil))
         ])
     }
     
@@ -112,7 +112,7 @@ final class NetworkManagerTest: XCTestCase {
         
         // Assert the expected values or errors using observer events
         XCTAssertEqual(observer.events, [
-            Recorded.error(0, NSError(domain: "MockErrorDomain", code: 42, userInfo: nil))
+            Recorded.error(0, NSError(domain: "MockErrorDomain", code: 43, userInfo: nil))
         ])
     }
     

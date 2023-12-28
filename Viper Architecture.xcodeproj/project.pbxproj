@@ -27,6 +27,9 @@
 		0823B9552B319D780076355E /* RegisterPresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */; };
 		0823B9572B31A8750076355E /* RegisterBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
+		08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B422B3D684500D9E65F /* MockNewsListView.swift */; };
+		08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */; };
+		08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */; };
 		0897A06D2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */; };
 		0897A0712B3545B700D4C8D9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0702B3545B700D4C8D9 /* Button.swift */; };
 		0897A07A2B35887D00D4C8D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0792B35887D00D4C8D9 /* NetworkManager.swift */; };
@@ -123,6 +126,9 @@
 		0823B9542B319D780076355E /* RegisterPresenterToRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterToRouterProtocol.swift; sourceTree = "<group>"; };
 		0823B9562B31A8750076355E /* RegisterBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBaseEndpoint.swift; sourceTree = "<group>"; };
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		08886B422B3D684500D9E65F /* MockNewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListView.swift; sourceTree = "<group>"; };
+		08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterTest.swift; sourceTree = "<group>"; };
+		08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListInteractor.swift; sourceTree = "<group>"; };
 		0897A06C2B344F3300D4C8D9 /* NewsListBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListBaseEndpoint.swift; sourceTree = "<group>"; };
 		0897A0702B3545B700D4C8D9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		0897A0792B35887D00D4C8D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -318,6 +324,24 @@
 			path = "Presenter to Router";
 			sourceTree = "<group>";
 		};
+		08886B402B3D681A00D9E65F /* News List */ = {
+			isa = PBXGroup;
+			children = (
+				08886B412B3D683000D9E65F /* Mock */,
+				08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */,
+			);
+			path = "News List";
+			sourceTree = "<group>";
+		};
+		08886B412B3D683000D9E65F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				08886B422B3D684500D9E65F /* MockNewsListView.swift */,
+				08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		0897A06E2B3544D100D4C8D9 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +361,7 @@
 		0897A0722B357DBB00D4C8D9 /* Unit Test */ = {
 			isa = PBXGroup;
 			children = (
+				08886B402B3D681A00D9E65F /* News List */,
 				08B09BB22B3C0A9200FC85CA /* Login Test */,
 				0897A0732B357E5600D4C8D9 /* Network Manager Test */,
 			);
@@ -971,11 +996,14 @@
 			files = (
 				08B09BC12B3C171B00FC85CA /* LoginInteractorTest.swift in Sources */,
 				08B09BBD2B3C0C6E00FC85CA /* MockRouter.swift in Sources */,
+				08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */,
 				08B09BB42B3C0ABF00FC85CA /* LoginPresenterTest.swift in Sources */,
 				08B09BBF2B3C16B300FC85CA /* MockPresenter.swift in Sources */,
+				08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */,
 				0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */,
 				0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */,
 				08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */,
+				08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */,
 				08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */,
 				08E9579C2B2C02AE006C31AF /* Viper_ArchitectureTests.swift in Sources */,
 			);
