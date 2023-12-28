@@ -148,32 +148,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2396326C-045C-416C-9ABF-A87FE55A424D"
+            uuid = "EDD60CD6-8618-4058-B8C3-B8E8004D1458"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Viper Architecture/Module/Login/Route/LoginRoute.swift"
+            filePath = "Viper Architecture/Supporting Files/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "navigateToDashboard(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D5B7A03C-9007-4D1C-9BFA-4D6FFA3BBE81"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Viper Architecture/Module/Login/Route/LoginRoute.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "removeAllViewControllerExceptLast(_:lastView:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "excuteQuery(url:method:parameters:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

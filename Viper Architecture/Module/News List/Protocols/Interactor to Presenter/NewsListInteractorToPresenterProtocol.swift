@@ -9,7 +9,7 @@ import Foundation
 
 protocol NewsListInteractorToPresenterProtocol: Any {
     
-    func newsListFetched()
+    func newsListFetched(newsData: NewsResponse?)
     func newsListFetchedFailed()
     
 }
