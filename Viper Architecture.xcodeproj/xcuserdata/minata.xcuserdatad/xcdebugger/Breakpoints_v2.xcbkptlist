@@ -142,6 +142,21 @@
                   endingLineNumber = "49"
                   offsetFromSymbolStart = "64">
                </Location>
+               <Location
+                  uuid = "E16CD2C1-C477-4F51-9EA4-5D8D20A6DF75 - ac5590afd8ae6482"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Error) -&gt; () in Viper_ArchitectureTests.LoginInteractorTest.testLoginProcessFailure() -&gt; ()"
+                  moduleName = "Viper ArchitectureTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20ArchitectureTests/Unit%20Test/Login%20Test/LoginInteractorTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "64">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
