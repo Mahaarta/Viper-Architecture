@@ -10,8 +10,6 @@ import Foundation
 struct NewsResponse: Codable, Equatable {
     
     let status: String?
-    let source: String?
-    let sortBy: String?
     let results: [NewsListEntity]?
     
 }

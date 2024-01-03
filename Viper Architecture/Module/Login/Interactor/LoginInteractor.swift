@@ -33,7 +33,7 @@ class LoginInteractor: LoginPresenterToInteractorProtocol {
             parameters: parameters,
             additionalHeaders: headers
         )
-        print("loginProcess data \(data)")
+
         return data
     }
 }

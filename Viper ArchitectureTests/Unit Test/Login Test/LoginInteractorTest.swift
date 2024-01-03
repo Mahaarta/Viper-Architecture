@@ -23,14 +23,7 @@ class LoginInteractorTest: XCTestCase {
         let password = "83r5^_"
 
         interactor.loginProcess(username: username, password: password)
-            .subscribe(
-                onNext: { loginEntity in
-                    print("onNext executed")
-                },
-                onCompleted: {
-                    print("onCompleted executed")
-                }
-            )
+            .subscribe()
             .disposed(by: DisposeBag())
     }
     
