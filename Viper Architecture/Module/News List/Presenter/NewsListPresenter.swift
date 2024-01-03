@@ -28,7 +28,7 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
                 onNext: { [weak self] fetchedNews in
                     self?.newsListFetched(newsData: fetchedNews)
                 }, onError: { [weak self] error in
-                    self?.newsListFetchedFailed()
+                    self?.newsListFetchedFailed(error: error)
                 }
             ).disposed(by: disposeBag)
     }
@@ -53,7 +53,7 @@ extension NewsListPresenter: NewsListInteractorToPresenterProtocol {
         view?.reloadData.accept(())
     }
     
-    func newsListFetchedFailed() {
+    func newsListFetchedFailed(error: Error) {
         view?.showError.accept(())
     }
     

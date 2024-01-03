@@ -28,7 +28,7 @@ class MockNewsListInteractor: NewsListPresenterToInteractorProtocol {
             return Observable.error(MockError.someError)
         }
         
-        return Observable.just(NewsResponse(status: "success", source: source, sortBy: "date", results: newsListDatas))
+        return Observable.just(NewsResponse(status: "success", results: newsListDatas))
     }
     
 }
