@@ -13,8 +13,27 @@ import RxCocoa
 
 class MockNewsListView: UIViewController, NewsListPresenterToViewProtocol {
     
-    var reloadData = PublishRelay<Void>()
+    var reloadDataCalled = false
+    var fetchedNewsData: NewsResponse?
     var showError = PublishRelay<Void>()
-    var newsListFetchedCalled = false
+    var reloadData = PublishRelay<Void>()
+    var reloadDataFailedCalled = false
+ 
+    private let disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureObservable()
+    }
+    
+    private func configureObservable() {
+        reloadData.subscribe(onNext: { [weak self] in
+            self?.reloadDataCalled = true
+        }).disposed(by: disposeBag)
+        
+        showError.subscribe(onNext: { [weak self] in
+            self?.reloadDataFailedCalled = true
+        }).disposed(by: disposeBag)
+    }
     
 }
