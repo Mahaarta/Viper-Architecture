@@ -29,7 +29,9 @@ class NewsListInteractor: NewsListPresenterToInteractorProtocol {
             url: endpoint,
             method: .get,
             parameters: parameters
-        )
+        ).catch { error in
+            return Observable.just(nil)
+        }
         
         return data
     }

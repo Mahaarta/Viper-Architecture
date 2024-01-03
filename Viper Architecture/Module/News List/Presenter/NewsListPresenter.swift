@@ -38,8 +38,12 @@ class NewsListPresenter: NewsListViewToPresenterProtocol {
     }
     
     func getNewsList(at index: Int) -> NewsListEntity? {
-        interactor?.newsListDatas?[index]
+        guard let newsListDatas = interactor?.newsListDatas, index >= 0 && index < newsListDatas.count else {
+            return nil
+        }
+        return newsListDatas[index]
     }
+
 }
 
 extension NewsListPresenter: NewsListInteractorToPresenterProtocol {

@@ -100,6 +100,13 @@ extension NewsListViewController: UITableViewDataSource {
 
 // MARK: Presenter to View
 extension NewsListViewController: NewsListPresenterToViewProtocol {
+    func newsListFetched(newsData: NewsResponse) {
+        print("newsListFetched 1")
+    }
+    
+    func newsListFetchedFailed() {
+        print("newsListFetchedFailed 1")
+    }
 }
 
 // MARK: Localization
