@@ -54,6 +54,8 @@
 		08B09BBF2B3C16B300FC85CA /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBE2B3C16B300FC85CA /* MockPresenter.swift */; };
 		08B09BC12B3C171B00FC85CA /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BC02B3C171B00FC85CA /* LoginInteractorTest.swift */; };
 		08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BC22B3C20B500FC85CA /* MockInteractor.swift */; };
+		08C4B6072B4697B8002C8704 /* RegisterInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4B6062B4697B8002C8704 /* RegisterInteractorTest.swift */; };
+		08C4B6092B469843002C8704 /* MockRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4B6082B469843002C8704 /* MockRegisterPresenter.swift */; };
 		08DDE3CB2B32EE3B002DAE21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DDE3CD2B32EE3B002DAE21 /* Localizable.strings */; };
 		08DDE3D02B32EE5F002DAE21 /* StructLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */; };
 		08DDE3D32B32F055002DAE21 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3D22B32F055002DAE21 /* LocalizationHelper.swift */; };
@@ -157,6 +159,8 @@
 		08B09BBE2B3C16B300FC85CA /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		08B09BC02B3C171B00FC85CA /* LoginInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
 		08B09BC22B3C20B500FC85CA /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
+		08C4B6062B4697B8002C8704 /* RegisterInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractorTest.swift; sourceTree = "<group>"; };
+		08C4B6082B469843002C8704 /* MockRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterPresenter.swift; sourceTree = "<group>"; };
 		08DDE3CC2B32EE3B002DAE21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DDE3CE2B32EE3E002DAE21 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLocalization.swift; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 			children = (
 				0876017B2B457FB70094C96B /* Mock */,
 				087601802B45805B0094C96B /* RegisterPresenterTest.swift */,
+				08C4B6062B4697B8002C8704 /* RegisterInteractorTest.swift */,
 			);
 			path = "Register Test";
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			children = (
 				0876017C2B457FC60094C96B /* MockRegisterView.swift */,
 				0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */,
+				08C4B6082B469843002C8704 /* MockRegisterPresenter.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -1041,7 +1047,9 @@
 				0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */,
 				0832D6E82B455D5F00C3E820 /* MockNewsListPresenter.swift in Sources */,
 				0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */,
+				08C4B6092B469843002C8704 /* MockRegisterPresenter.swift in Sources */,
 				0876017D2B457FC60094C96B /* MockRegisterView.swift in Sources */,
+				08C4B6072B4697B8002C8704 /* RegisterInteractorTest.swift in Sources */,
 				08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */,
 				08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */,
 				08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */,
