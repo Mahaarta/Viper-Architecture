@@ -30,6 +30,9 @@
 		0832D6E62B455C0800C3E820 /* NewsListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0832D6E52B455C0800C3E820 /* NewsListInteractorTest.swift */; };
 		0832D6E82B455D5F00C3E820 /* MockNewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0832D6E72B455D5F00C3E820 /* MockNewsListPresenter.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
+		0876017D2B457FC60094C96B /* MockRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876017C2B457FC60094C96B /* MockRegisterView.swift */; };
+		0876017F2B457FDD0094C96B /* MockRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */; };
+		087601812B45805B0094C96B /* RegisterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087601802B45805B0094C96B /* RegisterPresenterTest.swift */; };
 		08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B422B3D684500D9E65F /* MockNewsListView.swift */; };
 		08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */; };
 		08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */; };
@@ -132,6 +135,9 @@
 		0832D6E52B455C0800C3E820 /* NewsListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorTest.swift; sourceTree = "<group>"; };
 		0832D6E72B455D5F00C3E820 /* MockNewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListPresenter.swift; sourceTree = "<group>"; };
 		0865F5D32B304A3D00FB1C50 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		0876017C2B457FC60094C96B /* MockRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterView.swift; sourceTree = "<group>"; };
+		0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterInteractor.swift; sourceTree = "<group>"; };
+		087601802B45805B0094C96B /* RegisterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTest.swift; sourceTree = "<group>"; };
 		08886B422B3D684500D9E65F /* MockNewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListView.swift; sourceTree = "<group>"; };
 		08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterTest.swift; sourceTree = "<group>"; };
 		08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListInteractor.swift; sourceTree = "<group>"; };
@@ -330,6 +336,24 @@
 			path = "Presenter to Router";
 			sourceTree = "<group>";
 		};
+		0876017A2B457F9B0094C96B /* Register Test */ = {
+			isa = PBXGroup;
+			children = (
+				0876017B2B457FB70094C96B /* Mock */,
+				087601802B45805B0094C96B /* RegisterPresenterTest.swift */,
+			);
+			path = "Register Test";
+			sourceTree = "<group>";
+		};
+		0876017B2B457FB70094C96B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0876017C2B457FC60094C96B /* MockRegisterView.swift */,
+				0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		08886B402B3D681A00D9E65F /* News List */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +393,7 @@
 		0897A0722B357DBB00D4C8D9 /* Unit Test */ = {
 			isa = PBXGroup;
 			children = (
+				0876017A2B457F9B0094C96B /* Register Test */,
 				08886B402B3D681A00D9E65F /* News List */,
 				08B09BB22B3C0A9200FC85CA /* Login Test */,
 				0897A0732B357E5600D4C8D9 /* Network Manager Test */,
@@ -1006,14 +1031,17 @@
 				08B09BC12B3C171B00FC85CA /* LoginInteractorTest.swift in Sources */,
 				08B09BBD2B3C0C6E00FC85CA /* MockRouter.swift in Sources */,
 				08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */,
+				087601812B45805B0094C96B /* RegisterPresenterTest.swift in Sources */,
 				08B09BB42B3C0ABF00FC85CA /* LoginPresenterTest.swift in Sources */,
 				08B09BBF2B3C16B300FC85CA /* MockPresenter.swift in Sources */,
 				0832D6E42B4531B300C3E820 /* MockError.swift in Sources */,
+				0876017F2B457FDD0094C96B /* MockRegisterInteractor.swift in Sources */,
 				08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */,
 				0832D6E62B455C0800C3E820 /* NewsListInteractorTest.swift in Sources */,
 				0897A0832B35ACAD00D4C8D9 /* NetworkManagerTest.swift in Sources */,
 				0832D6E82B455D5F00C3E820 /* MockNewsListPresenter.swift in Sources */,
 				0897A0812B35A50100D4C8D9 /* MockNetworkManager.swift in Sources */,
+				0876017D2B457FC60094C96B /* MockRegisterView.swift in Sources */,
 				08B09BC32B3C20B500FC85CA /* MockInteractor.swift in Sources */,
 				08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */,
 				08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */,

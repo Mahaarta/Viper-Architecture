@@ -62,7 +62,7 @@ class NetworkManager: NetworkManagerProtocol {
         method: HTTPMethod,
         encoding: JSONEncoding = .default,
         parameters: Parameters? = nil,
-        additionalHeaders: HTTPHeaders?
+        additionalHeaders: HTTPHeaders? = nil
     ) -> Observable<T> where T: Codable {
         
         return Observable<T>.create({ observer in
