@@ -15,9 +15,11 @@ final class MockRegisterInteractor: RegisterPresenterToInteractorProtocol {
     var presenter: RegisterInteractorToPresenterProtocol?
     var registerData: RegisterEntity?
     var registerProcessCalled = false
+    var result: Observable<RegisterEntity?> = Observable.empty()
     
-    func registerProcess(name: String, email: String, password: String, avatar: String) {
+    func registerProcess(name: String, email: String, password: String, avatar: String) -> Observable<RegisterEntity?> {
         registerProcessCalled = true
+        return result
     }
     
 }
