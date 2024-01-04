@@ -12,9 +12,10 @@ import RxCocoa
 
 final class MockRegisterInteractor: RegisterPresenterToInteractorProtocol {
     
-    var presenter: RegisterInteractorToPresenterProtocol?
-    var registerData: RegisterEntity?
+    var RegisterSuccess: Bool?
     var registerProcessCalled = false
+    var registerData: RegisterEntity?
+    var presenter: RegisterInteractorToPresenterProtocol?
     var result: Observable<RegisterEntity?> = Observable.empty()
     
     func registerProcess(name: String, email: String, password: String, avatar: String) -> Observable<RegisterEntity?> {

@@ -11,7 +11,7 @@ import RxSwift
 
 class RegisterInteractor: RegisterPresenterToInteractorProtocol {
     var presenter: RegisterInteractorToPresenterProtocol?
-    var registerData: RegisterEntity?
+    var RegisterSuccess: Bool?
     
     private func getPath() -> String {
         return RegisterBaseEndpoint.getBasePath() + "v1/"

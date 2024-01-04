@@ -28,7 +28,7 @@ class RegisterPresenter: RegisterViewToPresenterProtocol {
                     self?.registerSuccess()
                 },
                 onError: { [weak self] error in
-                    self?.registerFailed()
+                    self?.registerFailed(error: error)
                 }
             ).disposed(by: disposeBag)
     }
@@ -41,7 +41,7 @@ extension RegisterPresenter: RegisterInteractorToPresenterProtocol {
         view?.registerSuccess.accept(())
     }
     
-    func registerFailed() {
+    func registerFailed(error: Error) {
         view?.registerFailed.accept(())
     }
     

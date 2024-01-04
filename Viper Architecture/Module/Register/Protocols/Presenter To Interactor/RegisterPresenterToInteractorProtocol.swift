@@ -10,7 +10,7 @@ import RxSwift
 protocol RegisterPresenterToInteractorProtocol: Any {
     
     var presenter: RegisterInteractorToPresenterProtocol? { get set }
-    var registerData: RegisterEntity? { get set }
+    var RegisterSuccess: Bool? { get }
     
     func registerProcess(name: String, email: String, password: String, avatar: String) -> Observable<RegisterEntity?>
     
