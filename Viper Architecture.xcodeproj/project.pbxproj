@@ -29,10 +29,21 @@
 		0832D6E42B4531B300C3E820 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0832D6E32B4531B300C3E820 /* MockError.swift */; };
 		0832D6E62B455C0800C3E820 /* NewsListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0832D6E52B455C0800C3E820 /* NewsListInteractorTest.swift */; };
 		0832D6E82B455D5F00C3E820 /* MockNewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0832D6E72B455D5F00C3E820 /* MockNewsListPresenter.swift */; };
+		084375ED2B4D304B0070B321 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 084375EC2B4D304B0070B321 /* RxCocoa */; };
+		084375EF2B4D304B0070B321 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 084375EE2B4D304B0070B321 /* RxCocoa-Dynamic */; };
+		084375F02B4D304B0070B321 /* RxCocoa-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 084375EE2B4D304B0070B321 /* RxCocoa-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		084375F32B4D30870070B321 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 084375F22B4D30870070B321 /* RxCocoa */; };
+		084375F52B4D30870070B321 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 084375F42B4D30870070B321 /* RxCocoa-Dynamic */; };
+		084375F62B4D30870070B321 /* RxCocoa-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 084375F42B4D30870070B321 /* RxCocoa-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		084C31052B4D62300057B4D4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897A0702B3545B700D4C8D9 /* Button.swift */; };
 		0865F5D42B304A3D00FB1C50 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865F5D32B304A3D00FB1C50 /* UIFont.swift */; };
 		0876017D2B457FC60094C96B /* MockRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876017C2B457FC60094C96B /* MockRegisterView.swift */; };
 		0876017F2B457FDD0094C96B /* MockRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */; };
 		087601812B45805B0094C96B /* RegisterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087601802B45805B0094C96B /* RegisterPresenterTest.swift */; };
+		087BE21B2B4BEF6F000731B7 /* LoginViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BE21A2B4BEF6F000731B7 /* LoginViewControllerUITest.swift */; };
+		087BE21E2B4BF4DF000731B7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21D2B4BF4DF000731B7 /* RxTest */; };
+		087BE2202B4BF4DF000731B7 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */; };
+		087BE2212B4BF4DF000731B7 /* RxTest-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B422B3D684500D9E65F /* MockNewsListView.swift */; };
 		08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */; };
 		08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */; };
@@ -48,6 +59,8 @@
 		08A408C22B303E3D0074BF3C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C12B303E3D0074BF3C /* LoginInteractor.swift */; };
 		08A408C42B303EB70074BF3C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C32B303EB70074BF3C /* LoginPresenter.swift */; };
 		08A408C62B303EBF0074BF3C /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A408C52B303EBF0074BF3C /* LoginRoute.swift */; };
+		08AE14482B4D56D300965A14 /* StructLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3CF2B32EE5F002DAE21 /* StructLocalization.swift */; };
+		08AE14492B4D56ED00965A14 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDE3D22B32F055002DAE21 /* LocalizationHelper.swift */; };
 		08B09BB42B3C0ABF00FC85CA /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BB32B3C0ABF00FC85CA /* LoginPresenterTest.swift */; };
 		08B09BBB2B3C0C2E00FC85CA /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBA2B3C0C2E00FC85CA /* MockView.swift */; };
 		08B09BBD2B3C0C6E00FC85CA /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B09BBC2B3C0C6E00FC85CA /* MockRouter.swift */; };
@@ -113,6 +126,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		084375F12B4D304B0070B321 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				084375F02B4D304B0070B321 /* RxCocoa-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		087BE2222B4BF4DF000731B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				084375F62B4D30870070B321 /* RxCocoa-Dynamic in Embed Frameworks */,
+				087BE2212B4BF4DF000731B7 /* RxTest-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0823B9262B316ED60076355E /* LoginViewToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewToPresenterProtocol.swift; sourceTree = "<group>"; };
 		0823B9282B316EE10076355E /* LoginPresenterToInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterToInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -140,6 +179,7 @@
 		0876017C2B457FC60094C96B /* MockRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterView.swift; sourceTree = "<group>"; };
 		0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterInteractor.swift; sourceTree = "<group>"; };
 		087601802B45805B0094C96B /* RegisterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTest.swift; sourceTree = "<group>"; };
+		087BE21A2B4BEF6F000731B7 /* LoginViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITest.swift; sourceTree = "<group>"; };
 		08886B422B3D684500D9E65F /* MockNewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListView.swift; sourceTree = "<group>"; };
 		08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterTest.swift; sourceTree = "<group>"; };
 		08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListInteractor.swift; sourceTree = "<group>"; };
@@ -218,6 +258,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084375EF2B4D304B0070B321 /* RxCocoa-Dynamic in Frameworks */,
+				084375ED2B4D304B0070B321 /* RxCocoa in Frameworks */,
 				0897A0872B35ACDD00D4C8D9 /* RxTest-Dynamic in Frameworks */,
 				0897A0852B35ACDD00D4C8D9 /* RxTest in Frameworks */,
 			);
@@ -227,6 +269,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084375F52B4D30870070B321 /* RxCocoa-Dynamic in Frameworks */,
+				084375F32B4D30870070B321 /* RxCocoa in Frameworks */,
+				087BE2202B4BF4DF000731B7 /* RxTest-Dynamic in Frameworks */,
+				087BE21E2B4BF4DF000731B7 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +404,21 @@
 				08C4B6082B469843002C8704 /* MockRegisterPresenter.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		087BE2192B4BEF5F000731B7 /* Login  */ = {
+			isa = PBXGroup;
+			children = (
+				087BE21A2B4BEF6F000731B7 /* LoginViewControllerUITest.swift */,
+			);
+			path = "Login ";
+			sourceTree = "<group>";
+		};
+		087BE21C2B4BF4DF000731B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		08886B402B3D681A00D9E65F /* News List */ = {
@@ -585,6 +646,7 @@
 				08E9579A2B2C02AE006C31AF /* Viper ArchitectureTests */,
 				08E957A42B2C02AE006C31AF /* Viper ArchitectureUITests */,
 				08E957882B2C02AD006C31AF /* Products */,
+				087BE21C2B4BF4DF000731B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -629,6 +691,7 @@
 		08E957A42B2C02AE006C31AF /* Viper ArchitectureUITests */ = {
 			isa = PBXGroup;
 			children = (
+				087BE2192B4BEF5F000731B7 /* Login  */,
 				08E957A52B2C02AE006C31AF /* Viper_ArchitectureUITests.swift */,
 				08E957A72B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift */,
 			);
@@ -861,6 +924,7 @@
 				08E957932B2C02AE006C31AF /* Sources */,
 				08E957942B2C02AE006C31AF /* Frameworks */,
 				08E957952B2C02AE006C31AF /* Resources */,
+				084375F12B4D304B0070B321 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -871,6 +935,8 @@
 			packageProductDependencies = (
 				0897A0842B35ACDD00D4C8D9 /* RxTest */,
 				0897A0862B35ACDD00D4C8D9 /* RxTest-Dynamic */,
+				084375EC2B4D304B0070B321 /* RxCocoa */,
+				084375EE2B4D304B0070B321 /* RxCocoa-Dynamic */,
 			);
 			productName = "Viper ArchitectureTests";
 			productReference = 08E957972B2C02AE006C31AF /* Viper ArchitectureTests.xctest */;
@@ -883,6 +949,7 @@
 				08E9579D2B2C02AE006C31AF /* Sources */,
 				08E9579E2B2C02AE006C31AF /* Frameworks */,
 				08E9579F2B2C02AE006C31AF /* Resources */,
+				087BE2222B4BF4DF000731B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -890,6 +957,12 @@
 				08E957A32B2C02AE006C31AF /* PBXTargetDependency */,
 			);
 			name = "Viper ArchitectureUITests";
+			packageProductDependencies = (
+				087BE21D2B4BF4DF000731B7 /* RxTest */,
+				087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */,
+				084375F22B4D30870070B321 /* RxCocoa */,
+				084375F42B4D30870070B321 /* RxCocoa-Dynamic */,
+			);
 			productName = "Viper ArchitectureUITests";
 			productReference = 08E957A12B2C02AE006C31AF /* Viper ArchitectureUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -1062,7 +1135,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E957A82B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift in Sources */,
+				08AE14482B4D56D300965A14 /* StructLocalization.swift in Sources */,
+				087BE21B2B4BEF6F000731B7 /* LoginViewControllerUITest.swift in Sources */,
 				08E957A62B2C02AE006C31AF /* Viper_ArchitectureUITests.swift in Sources */,
+				084C31052B4D62300057B4D4 /* Button.swift in Sources */,
+				08AE14492B4D56ED00965A14 /* LocalizationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,6 +1491,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		084375EC2B4D304B0070B321 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		084375EE2B4D304B0070B321 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		084375F22B4D30870070B321 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		084375F42B4D30870070B321 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		087BE21D2B4BF4DF000731B7 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
 		0897A0842B35ACDD00D4C8D9 /* RxTest */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08DDE3F62B342DA3002DAE21 /* XCRemoteSwiftPackageReference "RxSwift" */;

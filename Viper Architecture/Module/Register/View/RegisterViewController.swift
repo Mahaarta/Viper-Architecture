@@ -87,6 +87,7 @@ class RegisterViewController: UIViewController {
         registerTitleLabel.textAlignment = .left
         registerTitleLabel.text = Register.registerTitle
         registerTitleLabel.font = FontSans(fontSansType: .medium, fontSize: 25).set()
+        registerTitleLabel.accessibilityIdentifier = "registerTitleIdentifier"
     }
     
     /// Configure `Register Title`

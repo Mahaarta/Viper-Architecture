@@ -16,15 +16,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTitleLabel: UILabel!
     @IBOutlet weak var loginDescLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var usernameTextView: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var passwordTextView: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: Button!
     @IBOutlet weak var dontHaveAccountTextView: UITextView!
     
     var presenter: LoginViewToPresenterProtocol?
     let loginSuccess = PublishRelay<Void>()
-    let showError = PublishRelay<Void>()
+    var showError = PublishRelay<Void>()
     let navigateToRegister = PublishRelay<Void>()
     let navigateToDashboard = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
@@ -37,9 +37,9 @@ class LoginViewController: UIViewController {
         configureLoginTitleLabel()
         configureLoginDescLabel()
         configureUsernameLabel()
-        configureUsernameTextView()
+        configureUsernameTextField()
         configurePasswordLabel()
-        configurePasswordTextView()
+        configurePasswordTextField()
         configureLoginButton()
         configureAlreadHasAccountLabel()
     }
@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
         
         showError.subscribe(onNext: { [weak self] in
             let alert = UIAlertController(title: Application.whoops, message: LoginString.loginFailed, preferredStyle: UIAlertController.Style.alert)
+            alert.view.accessibilityIdentifier = "ErrorAlert"
             alert.addAction(UIAlertAction(title: Application.back, style: UIAlertAction.Style.default, handler: nil))
             self?.present(alert, animated: true, completion: nil)
             self?.loginButton.isLoading = false
@@ -88,11 +89,12 @@ class LoginViewController: UIViewController {
     }
     
     /// Configure `Username TextView`
-    private func configureUsernameTextView() {
-        usernameTextView.text = "mor_2314"
-        usernameTextView.autocorrectionType = .no
-        usernameTextView.clearButtonMode = .whileEditing
-        usernameTextView.font = FontSans(fontSansType: .regular, fontSize: 14).set()
+    private func configureUsernameTextField() {
+        usernameTextField.text = "mor_2314"
+        usernameTextField.autocorrectionType = .no
+        usernameTextField.clearButtonMode = .whileEditing
+        usernameTextField.accessibilityIdentifier = "usernameTextFieldIdentifier"
+        usernameTextField.font = FontSans(fontSansType: .regular, fontSize: 14).set()
     }
     
     /// Configure `Password textView`
@@ -103,11 +105,12 @@ class LoginViewController: UIViewController {
     }
     
     /// Configure `password textView`
-    private func configurePasswordTextView() {
-        passwordTextView.text = "83r5^_"
-        passwordTextView.autocorrectionType = .no
-        passwordTextView.isSecureTextEntry = true
-        passwordTextView.font = FontSans(fontSansType: .regular, fontSize: 14).set()
+    private func configurePasswordTextField() {
+        passwordTextField.text = "83r5^_"
+        passwordTextField.autocorrectionType = .no
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.accessibilityIdentifier = "passwordTextFieldIdentifier"
+        passwordTextField.font = FontSans(fontSansType: .regular, fontSize: 14).set()
     }
     
     /// Configure `Login Button`
@@ -121,6 +124,7 @@ class LoginViewController: UIViewController {
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.setAttributedTitle(attributes, for: .normal)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        loginButton.accessibilityIdentifier = "loginButtonIdentifier"
     }
     
     /// Configure `Register Label`
@@ -176,6 +180,7 @@ class LoginViewController: UIViewController {
         dontHaveAccountTextView.isEditable = false
         dontHaveAccountTextView.isSelectable = true
         dontHaveAccountTextView.delegate = self
+        dontHaveAccountTextView.accessibilityIdentifier = "dontHaveAccountTextViewIdentifier"
     }
     
     /// Configure `Detect First Responder`
