@@ -181,6 +181,18 @@ class LoginViewController: UIViewController {
         dontHaveAccountTextView.isSelectable = true
         dontHaveAccountTextView.delegate = self
         dontHaveAccountTextView.accessibilityIdentifier = "dontHaveAccountTextViewIdentifier"
+        
+        /// Set accessibilityIdentifier specifically for the link text within UITextView
+        if let linkRange = (dontHaveAccountTextView.text as NSString?)?.range(of: Register.signup) {
+            let linkStartPosition = dontHaveAccountTextView.position(from: dontHaveAccountTextView.beginningOfDocument, offset: linkRange.location)
+            let linkEndPosition = dontHaveAccountTextView.position(from: linkStartPosition!, offset: linkRange.length)
+            
+            if let textRange = dontHaveAccountTextView.textRange(from: linkStartPosition!, to: linkEndPosition!) {
+                let linkRect = dontHaveAccountTextView.firstRect(for: textRange)
+                let linkAccessibilityElement = dontHaveAccountTextView.inputAccessoryView?.hitTest(linkRect.origin, with: nil)
+                linkAccessibilityElement?.accessibilityIdentifier = "signupLinkIdentifier"
+            }
+        }
     }
     
     /// Configure `Detect First Responder`

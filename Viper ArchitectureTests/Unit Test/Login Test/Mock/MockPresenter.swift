@@ -10,16 +10,16 @@ import RxSwift
 import RxCocoa
 @testable import Viper_Architecture
 
-class MockPresenter: LoginInteractorToPresenterProtocol {
+public class MockPresenter: LoginInteractorToPresenterProtocol {
     
     var loginSuccess: Bool?
     var loginError: Error?
     
-    func loginSuccess(loginEntity: LoginEntity?) {
+    public func loginSuccess(loginEntity: LoginEntity?) {
         loginSuccess = true
     }
     
-    func loginFailed(error: Error) {
+    public func loginFailed(error: Error) {
         loginError = error
     }
     
