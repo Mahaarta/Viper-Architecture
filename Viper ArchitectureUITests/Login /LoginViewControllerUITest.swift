@@ -48,9 +48,16 @@ final class LoginViewControllerUITest: XCTestCase {
     }
     
     func testNavigateToRegisterInDontHaveAccount() {
-        let dontHaveAccountTextView = app.textViews["dontHaveAccountTextViewIdentifier"]
-        XCTAssertTrue(dontHaveAccountTextView.isHittable)
-        dontHaveAccountTextView.tap()
+        let signUpLink = app.links.element(boundBy: 0)
+        XCTAssertTrue(signUpLink.waitForExistence(timeout: 20), "Signup link not exists")
+        XCTAssertTrue(signUpLink.exists)
+        XCTAssertTrue(signUpLink.isHittable)
+        
+        signUpLink.tap()
+        
+        let nameTextField = app.buttons["registerButtonIdentifier"]
+        XCTAssertTrue(nameTextField.waitForExistence(timeout: 10), "Navigation to RegisterViewController failed")
+        XCTAssertTrue(nameTextField.exists)
     }
     
 }

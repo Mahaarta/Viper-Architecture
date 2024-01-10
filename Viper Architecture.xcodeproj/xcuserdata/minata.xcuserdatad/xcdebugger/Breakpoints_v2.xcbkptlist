@@ -163,49 +163,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D8720C68-3588-4177-96C1-1709D13AB773"
+            uuid = "58393F5B-E9A4-4506-888D-C751F2F42415"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viper Architecture/Module/Login/Presenter/LoginPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "navigateToRegister()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF401DA7-F2F4-41FD-A7DC-5B4D053D9623"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viper Architecture/Module/Login/Route/LoginRoute.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "navigateToRegister(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7022ABB3-1E57-4282-99E0-4A0A58ED723D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Viper Architecture/Module/Login/View/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "textView(_:shouldInteractWith:in:interaction:)"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "configureAlreadHasAccountLabel()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D8720C68-3588-4177-96C1-1709D13AB773 - 296c81991418a7b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Viper_Architecture.LoginViewController.textView(_: __C.UITextView, shouldInteractWith: Foundation.URL, in: __C._NSRange, interaction: __C.UITextItemInteraction) -&gt; Swift.Bool"
-                  moduleName = "Viper Architecture"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Login/View/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "236"
-                  endingLineNumber = "236"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "D8720C68-3588-4177-96C1-1709D13AB773 - 296c81991418a793"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Viper_Architecture.LoginViewController.textView(_: __C.UITextView, shouldInteractWith: Foundation.URL, in: __C._NSRange, interaction: __C.UITextItemInteraction) -&gt; Swift.Bool"
-                  moduleName = "Viper Architecture"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minata/Work/Viper%20Architecture/Viper%20Architecture/Module/Login/View/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "237"
-                  endingLineNumber = "237"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "836B64DC-7AED-4CAF-897B-FBD32C1FEEE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viper ArchitectureUITests/Register/RegisterViewControllerUITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "testRegisterForm()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

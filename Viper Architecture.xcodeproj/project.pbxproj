@@ -107,6 +107,7 @@
 		08F478D12B30495700362475 /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CB2B30495700362475 /* Product Sans Bold.ttf */; };
 		08F478D22B30495700362475 /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CC2B30495700362475 /* Product Sans Regular.ttf */; };
 		08F478D32B30495700362475 /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F478CD2B30495700362475 /* Product Sans Italic.ttf */; };
+		08F8AEFB2B4E6FD4003D6763 /* RegisterViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F8AEFA2B4E6FD4003D6763 /* RegisterViewControllerUITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		08F478CC2B30495700362475 /* Product Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Regular.ttf"; sourceTree = "<group>"; };
 		08F478CD2B30495700362475 /* Product Sans Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Italic.ttf"; sourceTree = "<group>"; };
 		08F478D42B3049A200362475 /* Viper-Architecture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Viper-Architecture-Info.plist"; sourceTree = SOURCE_ROOT; };
+		08F8AEFA2B4E6FD4003D6763 /* RegisterViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerUITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,6 +693,7 @@
 		08E957A42B2C02AE006C31AF /* Viper ArchitectureUITests */ = {
 			isa = PBXGroup;
 			children = (
+				08F8AEF92B4E6FC4003D6763 /* Register */,
 				087BE2192B4BEF5F000731B7 /* Login  */,
 				08E957A52B2C02AE006C31AF /* Viper_ArchitectureUITests.swift */,
 				08E957A72B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift */,
@@ -886,6 +889,14 @@
 				08F478CC2B30495700362475 /* Product Sans Regular.ttf */,
 			);
 			path = "Font Sans";
+			sourceTree = "<group>";
+		};
+		08F8AEF92B4E6FC4003D6763 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				08F8AEFA2B4E6FD4003D6763 /* RegisterViewControllerUITest.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1137,6 +1148,7 @@
 				08E957A82B2C02AE006C31AF /* Viper_ArchitectureUITestsLaunchTests.swift in Sources */,
 				08AE14482B4D56D300965A14 /* StructLocalization.swift in Sources */,
 				087BE21B2B4BEF6F000731B7 /* LoginViewControllerUITest.swift in Sources */,
+				08F8AEFB2B4E6FD4003D6763 /* RegisterViewControllerUITest.swift in Sources */,
 				08E957A62B2C02AE006C31AF /* Viper_ArchitectureUITests.swift in Sources */,
 				084C31052B4D62300057B4D4 /* Button.swift in Sources */,
 				08AE14492B4D56ED00965A14 /* LocalizationHelper.swift in Sources */,
@@ -1363,7 +1375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mahaarta.Viper-ArchitectureTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1383,7 +1395,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mahaarta.Viper-ArchitectureTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
