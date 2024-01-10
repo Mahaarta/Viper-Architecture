@@ -22,3 +22,25 @@ VIPER is an architecture pattern for organizing code in iOS applications. It sta
  ### Router
 - The Router handles navigation between different modules or screens in the application.
 - It is responsible for presenting and dismissing ViewControllers and communicates with the Presenter to initiate navigation
+
+## Unit Test
+- Network Manager Test
+- Login Test
+  - Mock
+    - Mock View
+    - Mock Router
+    - Mock Presenter
+    - Mock Interactor
+  - Presenter Test
+  - Interactor Test
+- Register
+  - Mock
+    - Mock View
+    - Mock Interactor
+    - Mock Presenter
+   - Presenter Test
+   - Interactor Test
+ 
+## UI Test 
+- LoginViewControllerUITest
+- RegisterViewControllerUITest
