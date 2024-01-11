@@ -15,7 +15,7 @@ class NewsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    let showError = PublishRelay<Void>()
+    var showError = PublishRelay<Void>()
     let reloadData = PublishRelay<Void>()
     var presenter: NewsListViewToPresenterProtocol?
     private let disposeBag = DisposeBag()
@@ -46,6 +46,7 @@ class NewsListViewController: UIViewController {
     private func setUpTableView() {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.accessibilityIdentifier = "newsListTableViewIdentifier"
         tableView.register(UINib(nibName: "NewsListTableViewCell", bundle: .main), forCellReuseIdentifier: "NewsListTableViewCell")
     }
     
@@ -68,6 +69,7 @@ class NewsListViewController: UIViewController {
             preferredStyle: UIAlertController.Style.alert
         )
         
+        alert.view.accessibilityIdentifier = "ErrorAlert"
         alert.addAction(UIAlertAction(
             title: Application.okay,
             style: UIAlertAction.Style.default,
@@ -100,13 +102,6 @@ extension NewsListViewController: UITableViewDataSource {
 
 // MARK: Presenter to View
 extension NewsListViewController: NewsListPresenterToViewProtocol {
-    func newsListFetched(newsData: NewsResponse) {
-        print("newsListFetched 1")
-    }
-    
-    func newsListFetchedFailed() {
-        print("newsListFetchedFailed 1")
-    }
 }
 
 // MARK: Localization
