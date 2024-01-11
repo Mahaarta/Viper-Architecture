@@ -44,6 +44,7 @@
 		087BE21E2B4BF4DF000731B7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21D2B4BF4DF000731B7 /* RxTest */; };
 		087BE2202B4BF4DF000731B7 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */; };
 		087BE2212B4BF4DF000731B7 /* RxTest-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 087BE21F2B4BF4DF000731B7 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		08868F5F2B4FCEA700190EDD /* NewsListViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868F5E2B4FCEA700190EDD /* NewsListViewControllerUITest.swift */; };
 		08886B432B3D684500D9E65F /* MockNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B422B3D684500D9E65F /* MockNewsListView.swift */; };
 		08886B472B3D717F00D9E65F /* NewsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */; };
 		08886B492B3D71A400D9E65F /* MockNewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */; };
@@ -181,6 +182,7 @@
 		0876017E2B457FDD0094C96B /* MockRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegisterInteractor.swift; sourceTree = "<group>"; };
 		087601802B45805B0094C96B /* RegisterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTest.swift; sourceTree = "<group>"; };
 		087BE21A2B4BEF6F000731B7 /* LoginViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITest.swift; sourceTree = "<group>"; };
+		08868F5E2B4FCEA700190EDD /* NewsListViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewControllerUITest.swift; sourceTree = "<group>"; };
 		08886B422B3D684500D9E65F /* MockNewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListView.swift; sourceTree = "<group>"; };
 		08886B462B3D717F00D9E65F /* NewsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterTest.swift; sourceTree = "<group>"; };
 		08886B482B3D71A400D9E65F /* MockNewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListInteractor.swift; sourceTree = "<group>"; };
@@ -421,6 +423,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08868F5D2B4FCE9400190EDD /* New List */ = {
+			isa = PBXGroup;
+			children = (
+				08868F5E2B4FCEA700190EDD /* NewsListViewControllerUITest.swift */,
+			);
+			path = "New List";
 			sourceTree = "<group>";
 		};
 		08886B402B3D681A00D9E65F /* News List */ = {
@@ -693,6 +703,7 @@
 		08E957A42B2C02AE006C31AF /* Viper ArchitectureUITests */ = {
 			isa = PBXGroup;
 			children = (
+				08868F5D2B4FCE9400190EDD /* New List */,
 				08F8AEF92B4E6FC4003D6763 /* Register */,
 				087BE2192B4BEF5F000731B7 /* Login  */,
 				08E957A52B2C02AE006C31AF /* Viper_ArchitectureUITests.swift */,
@@ -1152,6 +1163,7 @@
 				08E957A62B2C02AE006C31AF /* Viper_ArchitectureUITests.swift in Sources */,
 				084C31052B4D62300057B4D4 /* Button.swift in Sources */,
 				08AE14492B4D56ED00965A14 /* LocalizationHelper.swift in Sources */,
+				08868F5F2B4FCEA700190EDD /* NewsListViewControllerUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,6 +1230,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1281,6 +1294,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1309,6 +1323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Viper Architecture/Preview Content\"";
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;
@@ -1341,6 +1356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"Viper Architecture/Preview Content\"";
 				DEVELOPMENT_TEAM = 3HGJV364P5;
 				ENABLE_PREVIEWS = YES;

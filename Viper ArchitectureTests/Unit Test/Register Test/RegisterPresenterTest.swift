@@ -47,14 +47,13 @@ final class RegisterPresenterTest: XCTestCase {
         interactor.result = Observable.just(registerEntity)
         
         mockView.viewDidLoad()
+        presenter.registerProcess(name: "mock name", email: "mockEmail@mail.com", password: "mockPassword", avatar: "https://mock-avatar.png")
         
         registerSuccessRelay.subscribe(onNext: {
             print("registerSuccessRelay event manually triggered")
         }).disposed(by: disposeBag)
         
-        presenter.registerProcess(name: "mock name", email: "mockEmail@mail.com", password: "mockPassword", avatar: "https://mock-avatar.png")
         registerSuccessRelay.accept(())
-        
         testScheduler?.start()
         
         /// Assert

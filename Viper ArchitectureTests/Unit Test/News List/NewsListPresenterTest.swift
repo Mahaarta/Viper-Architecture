@@ -121,5 +121,20 @@ final class NewsListPresenterTest: XCTestCase {
         let outOfBoundsEntity = presenter.getNewsList(at: mockData.count)
         XCTAssertNil(outOfBoundsEntity)
     }
+    
+    func testAlertError() {
+        let testScheduler = scheduler
+        let showErrorRelay = PublishRelay<Void>()
+        let mockView = MockNewsListView()
+        
+        mockView.showError = showErrorRelay
+        mockView.viewDidLoad()
+        
+        showErrorRelay.accept(())
+        testScheduler?.start()
+        
+        XCTAssertTrue(mockView.reloadDataFailedCalled)
+        XCTAssertFalse(mockView.reloadDataCalled)
+    }
 
 }
